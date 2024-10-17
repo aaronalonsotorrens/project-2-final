@@ -41,3 +41,21 @@ function checkScore() {
         [0,3,6], [1,4,7], [2,5,8],
         [0,4,8], [2,4,6]
     ]
+    winningCombos.forEach(array => {
+        const marioWins = array.every(cell =>
+            allSquares[cell].firstChild?.classlist.contains("mario"))
+        if (marioWins) {
+            infoDisplay.textContent = "Yahooo Let's Go!"
+            allSquares.forEach(square => square.replaceWith(square.cloneNode(true)))
+        }
+    })
+
+    winningCombos.forEach(array => {
+        const bowserWins = array.every(cell =>
+            allSquares[cell].firstChild?.classlist.contains("bowser"))
+        if (bowserWins) {
+            infoDisplay.textContent = "Oooohhh noooo!"
+        }
+    })
+    
+}
