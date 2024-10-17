@@ -55,11 +55,9 @@ button {
     height: 90px;
     width: 90px;
     position: relative;
+    border-radius: 50%;
+    border: 15px solid rgb(255, 0, 0);
+    box-sizing: border-box;
 }
 
-.bowser:before, .bowser:after {
-    content: "";
-    position: absolute;
-    background-color: red;
-}
 

@@ -1,19 +1,36 @@
 const board = document.querySelector("#board")
 const infoDisplay = document.querySelector("#info")
 const createCells = ["","","","","","","","",""]
-
+let start = "mario"
 infoDisplay.textContent = "Mario goes first"
 
 function createBoard() {
     createCells.forEach((index) => {
         const cellElement = document.createElement("div")
         cellElement.classList.add("square")
-        const marioElement = document.createElement("div")
-        marioElement.classList.add("mario")
-        cellElement.append(marioElement)
+        cellElement.id = index
+        cellElement.addEventListener("click", startGame)
         board.append(cellElement)
 
     })
 }
 
 createBoard()
+
+function startGame(e) {
+    console.log("clicked", e.target)
+    const startDisplay = document.createElement("div")
+    startDisplay.classList.add(start)
+    e.target.append(startDisplay)
+    /* Following if statement can also be written in the following way start = start === "mario" ? "bowser" : "mario" */
+    if (start === "mario") {
+        start = "bowser";
+    } else {
+        start = "mario";
+    }
+    infoDisplay.textContent = "It is now" + start + "'s go"
+    e.target.removeEventListener("click", startGame)
+    checkScore()
+
+}
+
