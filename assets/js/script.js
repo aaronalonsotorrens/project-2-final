@@ -1,6 +1,8 @@
 const board = document.querySelector("#board")
 const infoDisplay = document.querySelector("#info")
 const createCells = ["","","","","","","","",""]
+const winningMessageElement = document.getElementById('winningMessage')
+const winningMessageTextElement = document.querySelector('[data-winning-message-text]')
 let start = "mario"
 infoDisplay.textContent = "Mario goes first"
 
@@ -9,32 +11,33 @@ function createBoard() {
         const cellElement = document.createElement("div")
         cellElement.classList.add("square")
         cellElement.id = index
-        cellElement.addEventListener("click", startGame)
+        cellElement.addEventListener("click", startGame, )
         board.append(cellElement)
 
     })
 }
-
 createBoard()
 
+
 function startGame(e) {
-    console.log("clicked", e.target)
-    const startDisplay = document.createElement("div")
-    startDisplay.classList.add(start)
-    e.target.append(startDisplay)
+    const cell = e.target
     /* Following if statement can also be written in the following way start = start === "mario" ? "bowser" : "mario" */
+    const currentClass = "mario" ? "mario" : "bowser"; 
+    
+    cell.classList.add(currentClass); 
+
     if (start === "mario") {
         start = "bowser";
     } else {
         start = "mario";
     }
-    infoDisplay.textContent = "It is now" + start + "'s go"
+    infoDisplay.textContent = "It is now " + start + " 's go"
     e.target.removeEventListener("click", startGame)
-    checkScore()
+    
 
 }
 
-function checkScore() {
+function checkWin() {
     const allSquares = document.querySelectorAll(".square")
     const winningCombos = [
         [0,1,2], [3,4,5], [6,7,8],
@@ -43,13 +46,13 @@ function checkScore() {
     ]
     winningCombos.forEach(array => {
         const marioWins = array.every(cell =>
-            allSquares[cell].firstChild?.classlist.contains("mario"))
+            allSquares[cell].classList.contains("mario")
+        );
         if (marioWins) {
-            infoDisplay.textContent = "Yahooo Let's Go!"
-            allSquares.forEach(square => square.replaceWith(square.cloneNode(true)))
+            winningMessageTextElement.innerText = "Yahooo Let's Go!"
+            
         }
     })
-
     winningCombos.forEach(array => {
         const bowserWins = array.every(cell =>
             allSquares[cell].firstChild?.classlist.contains("bowser"))
@@ -57,5 +60,17 @@ function checkScore() {
             infoDisplay.textContent = "Oooohhh noooo!"
         }
     })
-    
+    if (checkWin(currentClass)) {
+        endGame(false);
+    }
+}
+
+
+function endGame(draw) {
+    if (draw) {
+
+    } else {
+
+    }
+    winningMessageElement.classList.add('show')
 }
