@@ -35,15 +35,7 @@ section {
     cursor: pointer;
 }
 
-button {
-    margin-bottom: 20px;
-    height: 30px;
-    border: none;
-    color: white;
-    background-color: red;
-    cursor: pointer;
-    border-radius: 10px;
-}
+
 
 .mario {
     height: 90px;
@@ -54,6 +46,10 @@ button {
 }
 
 .bowser {
+    background-image: url('./images/bowser.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;   
     height: 90px;
     width: 90px;
     position: relative;
@@ -75,6 +71,21 @@ button {
     color: white;
     font-size: 5rem;
 }
+
+.winning-message button {
+    font-size: 3rem;
+    background-color:yellow;
+    border: 1px solid black;
+    padding: .25em .5em;
+    cursor: pointer;
+}
+
+.winning-message button:hover {
+    background-color: black;
+    color: white;
+    border-color: white;
+}
+
 
 .winning-message.show {
     display: flex;

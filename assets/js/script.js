@@ -46,32 +46,36 @@ function checkScore() {
         [0, 4, 8], [2, 4, 6]
     ]
 
+    let marioWins = false;
+    let bowserWins = false;
+
     // Check for Mario's win
     winningCombos.forEach(array => {
-        const marioWins = array.every(cell =>
-            allSquares[cell].firstChild?.classList.contains("mario"))  // Fixed typo: classList
-        if (marioWins) {
-            winningMessageTextElement.innerText = "Yahooo Let's Go!"
-            endGame()  // Disable further clicks
+        if (array.every(cell => allSquares[cell].firstChild?.classList.contains("mario"))) {
+            marioWins = true;
         }
-        
-    })
+    });
 
     // Check for Bowser's win
     winningCombos.forEach(array => {
-        const bowserWins = array.every(cell =>
-            allSquares[cell].firstChild?.classList.contains("bowser"))  // Fixed typo: classList
-        if (bowserWins) {
-            infoDisplay.textContent = "Oooohhh noooo!"
-            endGame()  // Disable further clicks
+        if (array.every(cell => allSquares[cell].firstChild?.classList.contains("bowser"))) {
+            bowserWins = true;
         }
-    })
+    });
+
+    // Call endGame if a winner is detected
+    if (marioWins || bowserWins) {
+        endGame(marioWins, bowserWins);
+    }
 }
 
-function endGame(draw) {
-    if (draw) {
-    } 
-    else {
+function endGame(marioWins, bowserWins) {
+    if (marioWins) {
+        winningMessageTextElement.innerText = "Yahooo Let's Go!";
+    } else if (bowserWins) {
+        winningMessageTextElement.innerText = "Oooohhh noooo!";
     }
-    
+
+    // Show the winning message
+    winningMessageElement.classList.add('show');
 }
