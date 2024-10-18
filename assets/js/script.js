@@ -7,70 +7,71 @@ let start = "mario"
 infoDisplay.textContent = "Mario goes first"
 
 function createBoard() {
-    createCells.forEach((index) => {
+    createCells.forEach((_, index) => {
         const cellElement = document.createElement("div")
         cellElement.classList.add("square")
         cellElement.id = index
-        cellElement.addEventListener("click", startGame, )
+        cellElement.addEventListener("click", startGame)
         board.append(cellElement)
-
     })
 }
+
 createBoard()
 
-
 function startGame(e) {
-    const cell = e.target
-    /* Following if statement can also be written in the following way start = start === "mario" ? "bowser" : "mario" */
-    const currentClass = "mario" ? "mario" : "bowser"; 
-    
-    cell.classList.add(currentClass); 
+    console.log("clicked", e.target)
+    const startDisplay = document.createElement("div")
+    startDisplay.classList.add(start)
+    e.target.append(startDisplay)
 
+    // Alternate between "mario" and "bowser"
     if (start === "mario") {
         start = "bowser";
     } else {
         start = "mario";
     }
-    infoDisplay.textContent = "It is now " + start + " 's go"
-    e.target.removeEventListener("click", startGame)
-    
+    infoDisplay.textContent = "It is now " + start + "'s go"
 
+    // Remove the event listener to prevent multiple clicks on the same square
+    e.target.removeEventListener("click", startGame)
+
+    checkScore()
 }
 
-function checkWin() {
+function checkScore() {
     const allSquares = document.querySelectorAll(".square")
     const winningCombos = [
-        [0,1,2], [3,4,5], [6,7,8],
-        [0,3,6], [1,4,7], [2,5,8],
-        [0,4,8], [2,4,6]
+        [0, 1, 2], [3, 4, 5], [6, 7, 8],
+        [0, 3, 6], [1, 4, 7], [2, 5, 8],
+        [0, 4, 8], [2, 4, 6]
     ]
+
+    // Check for Mario's win
     winningCombos.forEach(array => {
         const marioWins = array.every(cell =>
-            allSquares[cell].classList.contains("mario")
-        );
+            allSquares[cell].firstChild?.classList.contains("mario"))  // Fixed typo: classList
         if (marioWins) {
             winningMessageTextElement.innerText = "Yahooo Let's Go!"
-            
+            endGame()  // Disable further clicks
         }
+        
     })
+
+    // Check for Bowser's win
     winningCombos.forEach(array => {
         const bowserWins = array.every(cell =>
-            allSquares[cell].firstChild?.classlist.contains("bowser"))
+            allSquares[cell].firstChild?.classList.contains("bowser"))  // Fixed typo: classList
         if (bowserWins) {
             infoDisplay.textContent = "Oooohhh noooo!"
+            endGame()  // Disable further clicks
         }
     })
-    if (checkWin(currentClass)) {
-        endGame(false);
-    }
 }
-
 
 function endGame(draw) {
     if (draw) {
-
-    } else {
-
+    } 
+    else {
     }
-    winningMessageElement.classList.add('show')
+    
 }
