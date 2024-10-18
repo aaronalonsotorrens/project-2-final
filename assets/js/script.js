@@ -3,6 +3,7 @@ const infoDisplay = document.querySelector("#info")
 const createCells = ["","","","","","","","",""]
 const winningMessageElement = document.getElementById('winningMessage')
 const winningMessageTextElement = document.querySelector('[data-winning-message-text]')
+const restartButton = document.getElementById('restartButton')
 let start = "mario"
 infoDisplay.textContent = "Mario goes first"
 
@@ -36,6 +37,7 @@ function startGame(e) {
     e.target.removeEventListener("click", startGame)
 
     checkScore()
+    
 }
 
 function checkScore() {
@@ -79,3 +81,5 @@ function endGame(marioWins, bowserWins) {
     // Show the winning message
     winningMessageElement.classList.add('show');
 }
+
+restartButton.addEventListener('click', startGame);
