@@ -1,5 +1,6 @@
 const board = document.querySelector("#board")
 const infoDisplay = document.querySelector("#info")
+
 const createCells = ["","","","","","","","",""]
 const winningMessageElement = document.getElementById('winningMessage')
 const winningMessageTextElement = document.querySelector('[data-winning-message-text]')
@@ -82,4 +83,23 @@ function endGame(marioWins, bowserWins) {
     winningMessageElement.classList.add('show');
 }
 
-restartButton.addEventListener('click', startGame);
+// Restart game and reset the board
+restartButton.addEventListener('click', restartGame)
+
+function restartGame() {
+    // Hide the winning message
+    winningMessageElement.classList.remove('show')
+
+    // Clear the game state
+    createCells = ["","","","","","","","",""]
+
+    // Reset player turn to Mario
+    start = "mario"
+    infoDisplay.textContent = "Mario goes first"
+
+    // Clear the board element and recreate it
+    board.innerHTML = "";  // Clear all the cells on the board
+
+    // Recreate the board with empty cells and attach new event listeners
+    createBoard()
+}

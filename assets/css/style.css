@@ -1,7 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Lilita+One&display=swap');
+
+
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
 body {
-    font-family: "Lilita One";
     background-color: yellow;
+    display: grid;
+    grid-template-rows: 1fr auto;
 }
 
 section {
@@ -11,6 +19,7 @@ section {
     width: 400px;
     margin-top: 75px;
     border-radius: 10px;
+    flex-grow: 1;
 }
 
 .game-name {
@@ -91,3 +100,21 @@ section {
 }
 
 
+footer {
+    background-color: #0A7B79;
+    flex-shrink: 0;
+}
+
+#social-network {
+    text-align: center;
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-evenly;
+    list-style-type: none;
+}
+
+#social-network i {
+    font-size: 160%;
+    padding: 5%;
+    color: #ffffff;
+}
