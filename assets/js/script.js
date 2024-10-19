@@ -69,7 +69,15 @@ function checkScore() {
     // Call endGame if a winner is detected
     if (marioWins || bowserWins) {
         endGame(marioWins, bowserWins);
+        removeClickEvents();
     }
+}
+
+function removeClickEvents() {
+    const allSquares = document.querySelectorAll(".square");
+    allSquares.forEach(square => {
+        square.removeEventListener("click", startGame)
+    })
 }
 
 function endGame(marioWins, bowserWins) {
@@ -87,19 +95,11 @@ function endGame(marioWins, bowserWins) {
 restartButton.addEventListener('click', restartGame)
 
 function restartGame() {
-    // Hide the winning message
     winningMessageElement.classList.remove('show')
-
-    // Clear the game state
     createCells = ["","","","","","","","",""]
-
-    // Reset player turn to Mario
     start = "mario"
     infoDisplay.textContent = "Mario goes first"
+    board.innerHTML = "";  
 
-    // Clear the board element and recreate it
-    board.innerHTML = "";  // Clear all the cells on the board
-
-    // Recreate the board with empty cells and attach new event listeners
     createBoard()
 }
