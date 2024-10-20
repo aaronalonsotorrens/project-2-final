@@ -1,7 +1,7 @@
 const board = document.querySelector("#board")
 const infoDisplay = document.querySelector("#info")
 
-const createCells = ["","","","","","","","",""]
+let createCells = ["","","","","","","","",""]
 const winningMessageElement = document.getElementById('winningMessage')
 const winningMessageTextElement = document.querySelector('[data-winning-message-text]')
 const restartButton = document.getElementById('restartButton')
@@ -34,7 +34,7 @@ function startGame(e) {
     }
     infoDisplay.textContent = "It is now " + start + "'s go"
 
-    // Remove the event listener to prevent multiple clicks on the same square
+    // Remove the event listener to prevent multiple clicks on the same square once the game ends
     e.target.removeEventListener("click", startGame)
 
     checkScore()
@@ -52,21 +52,21 @@ function checkScore() {
     let marioWins = false;
     let bowserWins = false;
 
-    // Check for Mario's win
+    // Check if Mario wins
     winningCombos.forEach(array => {
         if (array.every(cell => allSquares[cell].firstChild?.classList.contains("mario"))) {
             marioWins = true;
         }
     });
 
-    // Check for Bowser's win
+    // Check if bowser wins
     winningCombos.forEach(array => {
         if (array.every(cell => allSquares[cell].firstChild?.classList.contains("bowser"))) {
             bowserWins = true;
         }
     });
 
-    // Call endGame if a winner is detected
+    // Once a winer is found remove further clicks on each square
     if (marioWins || bowserWins) {
         endGame(marioWins, bowserWins);
         removeClickEvents();
@@ -95,11 +95,11 @@ function endGame(marioWins, bowserWins) {
 restartButton.addEventListener('click', restartGame)
 
 function restartGame() {
-    winningMessageElement.classList.remove('show')
-    createCells = ["","","","","","","","",""]
-    start = "mario"
-    infoDisplay.textContent = "Mario goes first"
+    winningMessageElement.classList.remove('show');
+    createCells = ["","","","","","","","",""];
+    start = "mario";
+    infoDisplay.textContent = "Mario goes first";
     board.innerHTML = "";  
 
-    createBoard()
+    createBoard();
 }

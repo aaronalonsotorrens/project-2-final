@@ -11,6 +11,19 @@ body {
     font-family: "Lilita One";
 }
 
+nav {
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 75px;
+    width:100%;
+    background: #2CB01A;
+    
+}
+#tic-tac-yahoo {
+    background-color: yellow;
+}
+
 section {
     background-color: white;
     text-align: Center;
