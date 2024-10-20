@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,40 +11,83 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lilita+One&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href= "assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/style.css">
     <title>Document</title>
 </head>
+
 <body>
-    <header>
-        <a href="index.html">
-            <h1 class="logo"> Super Mario Arcade</h1>
-        </a>
-        <nav>
-            <div class="navbar">
-                <div class="logo"><a href="game-name">Super Mario Arcade</a></div>
-                <ul class="menu">
-                    <li><a href="index.html" class="active">Home</a></li>
-                    <li><a href="#tic-tac-yahoo" aria-label="Go to the tic-tac-yahoo game">Tic-tac-yahoo</a></li>
-                    <li><a href="#game-2" aria-label="Go to the game 2 game">Game 2</a></li>
-                </ul>
+    <nav>
+        <div class="navbar">
+            <div class="logo">
+                <h1 id="logo">Super Mario Arcade</h1>
             </div>
-        </nav>
-    </header>
+            <ul class="menu">
+                <li><a href="main-page.html" class="active" aria-label="Go to the main-page">Home</a></li>
+                <li><a href="#index.html" aria-label="Go to the tic-tac-yahoo game">Tic-tac-yahoo</a></li>
+                <li><a href="#game-2" aria-label="Go to the game 2 game">Game 2</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!--List games available and explain rules-->
+
+    <section>
+        <div class="rules">
+            <h2>Rules</h2>
+        </div>
+        <div class="rules-game1">
+            <h3>Tic-tac-Yahooo (2 Players)</h3>
+            <p>Welcome to the Mario vs. Bowser Tic-Tac-Yahoooo Showdown!
+                In this exciting twist on the classic game, Mario and Bowser face off for ultimate control over the
+                Mushroom Kingdom!</p>
+            <h4>How to Play:</h4>
+            <ol class="rules-game1-list">
+                <li>Players:</li>
+                <ul>
+                    <li>Player 1 is represented by Mario</li>
+                    <li>Player 2 is represented by Bowser</li>
+                </ul>
+                <li>Objective</li>
+                <p>The goal is to get three in a row horizontally, vertically, or diagonally using your character (Mario
+                    or Bowser).
+                    The first player to achieve this wins the game!</p>
+                <li>Game Board:</li>
+                <p>The Tic-Tac-Toe board is a 3x3 grid, just like the traditional version. However, instead of using
+                    circles (O) and crosses (X),
+                    Player 1 will place Mario's image in a square, and Player 2 will place Bowser's image in their
+                    chosen square.</p>
+                <li>Turn Sequence:</li>
+                <ul>
+                    <li>Player 1 (Mario) goes first and selects a square to place Mario's image.</li>
+                    <li>Player 2 (Bowser) then chooses a different square to place Bowser's image.</li>
+                    <li>The game alternates between players until one player gets three of their images in a row or the
+                        board is full.</li>
+                </ul>
+                <li>Winning the Game:</li>
+                <ul>
+                    <li>If a player gets three Mario or three Bowser images in a straight line (horizontal, vertical, or
+                        diagonal), they win!</li>
+                    <li>If all squares are filled and no one has three in a row, it's a draw.</li>
+                </ul>
+            </ol>
+        </div>
+
+    </section>
 
     <footer>
         <ul id="social-network">
             <li>
                 <a href="https://www.facebook.com/" target="_blank" rel="noopener"
                     aria-label="Visit our facebook page (opens in a new tab)"><i class="fa-brands fa-facebook"></i></a>
-                </li>
+            </li>
             <li>
                 <a href="https://www.instagram.com/" target="_blank" rel="noopener"
                     aria-label="Visit our facebook page (opens in a new tab)"><i class="fa-brands fa-instagram"></i></a>
-                </li>
+            </li>
             <li>
                 <a href="https://www.linkedin.com/" target="_blank" rel="noopener"
                     aria-label="Visit our facebook page (opens in a new tab)"><i class="fa-brands fa-linkedin"></i></a>
-                </li>
+            </li>
         </ul>
     </footer>
 
