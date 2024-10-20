@@ -23,8 +23,8 @@
             </div>
             <ul class="menu">
                 <li><a href="main-page.html" class="active" aria-label="Go to the main-page">Home</a></li>
-                <li><a href="#index.html" aria-label="Go to the tic-tac-yahoo game">Tic-tac-yahoo</a></li>
-                <li><a href="#game-2" aria-label="Go to the game 2 game">Game 2</a></li>
+                <li><a href="index.html" aria-label="Go to the tic-tac-yahoo game">Tic-tac-yahoo</a></li>
+                <li><a href="game-2" aria-label="Go to the game 2 game">Game 2</a></li>
             </ul>
         </div>
     </nav>
@@ -32,46 +32,61 @@
     <!--List games available and explain rules-->
 
     <section>
-        <div class="rules">
-            <h2>Rules</h2>
+        <div class="all-rules">
+            <div class="rules">
+                <h2>Rules</h2>
+            </div>
+            <div class="rules-game1">
+                <h3>Tic-tac-Yahooo (2 Players)</h3>
+                <p>Welcome to the Mario vs. Bowser Tic-Tac-Yahoooo Showdown!
+                    In this exciting twist on the classic game, Mario and Bowser face off for ultimate control over the
+                    Mushroom Kingdom!</p>
+                <button onclick="showHideRulesGame1()" class = "open-rules-game1">Rules</button>
+            </div>
+            <div class="how-to-play-game-1 hide">
+            
+                <h4>How to Play:</h4>
+                <ol class="rules-game1-list">
+                    <li>Players:
+                        <div class="player-list">
+                            <ul>
+                                <li>Player 1 is represented by Mario</li>
+                                <li>Player 2 is represented by Bowser</li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>Objective</li>
+                    <p>The goal is to get three in a row horizontally, vertically, or diagonally using your character (Mario
+                        or Bowser).
+                        The first player to achieve this wins the game!</p>
+                    <li>Game Board:</li>
+                    <p>The Tic-Tac-Toe board is a 3x3 grid, just like the traditional version. However, instead of using
+                        circles (O) and crosses (X),
+                        Player 1 will place Mario's image in a square, and Player 2 will place Bowser's image in their
+                        chosen square.</p>
+                    <li>Turn Sequence:
+                        <div class="turn-sequence-list">
+                            <ul>
+                                <li>Player 1 (Mario) goes first and selects a square to place Mario's image.</li>
+                                <li>Player 2 (Bowser) then chooses a different square to place Bowser's image.</li>
+                                <li>The game alternates between players until one player gets three of their images in a row or the
+                                    board is full.</li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>Winning the Game:
+                        <div class="winning-rules">
+                            <ul>
+                                <li>If a player gets three Mario or three Bowser images in a straight line (horizontal, vertical, or
+                                    diagonal), they win!</li>
+                                <li>If all squares are filled and no one has three in a row, it's a draw.</li>
+                            </ul>
+                        </div>
+                    </li>
+                </ol>
+               
+            </div>
         </div>
-        <div class="rules-game1">
-            <h3>Tic-tac-Yahooo (2 Players)</h3>
-            <p>Welcome to the Mario vs. Bowser Tic-Tac-Yahoooo Showdown!
-                In this exciting twist on the classic game, Mario and Bowser face off for ultimate control over the
-                Mushroom Kingdom!</p>
-            <h4>How to Play:</h4>
-            <ol class="rules-game1-list">
-                <li>Players:</li>
-                <ul>
-                    <li>Player 1 is represented by Mario</li>
-                    <li>Player 2 is represented by Bowser</li>
-                </ul>
-                <li>Objective</li>
-                <p>The goal is to get three in a row horizontally, vertically, or diagonally using your character (Mario
-                    or Bowser).
-                    The first player to achieve this wins the game!</p>
-                <li>Game Board:</li>
-                <p>The Tic-Tac-Toe board is a 3x3 grid, just like the traditional version. However, instead of using
-                    circles (O) and crosses (X),
-                    Player 1 will place Mario's image in a square, and Player 2 will place Bowser's image in their
-                    chosen square.</p>
-                <li>Turn Sequence:</li>
-                <ul>
-                    <li>Player 1 (Mario) goes first and selects a square to place Mario's image.</li>
-                    <li>Player 2 (Bowser) then chooses a different square to place Bowser's image.</li>
-                    <li>The game alternates between players until one player gets three of their images in a row or the
-                        board is full.</li>
-                </ul>
-                <li>Winning the Game:</li>
-                <ul>
-                    <li>If a player gets three Mario or three Bowser images in a straight line (horizontal, vertical, or
-                        diagonal), they win!</li>
-                    <li>If all squares are filled and no one has three in a row, it's a draw.</li>
-                </ul>
-            </ol>
-        </div>
-
     </section>
 
     <footer>
@@ -93,4 +108,5 @@
 
     <!-- Font awesome kit -->
     <script src="https://kit.fontawesome.com/c247824db4.js" crossorigin="anonymous"></script>
+    <script src="assets/js/main-page-script.js"></script>
 </body>

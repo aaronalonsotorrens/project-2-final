@@ -7,7 +7,10 @@
 }
 
 body {
-    background-color: yellow;
+    background: url("../images/classic-world-video-game-background-free-vector.jpg");
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
     font-family: "Lilita One";
 }
 
@@ -50,6 +53,46 @@ nav .navbar {
     font-weight: 400;
     text-decoration: none;
 }
+
+/*CSS for main page*/
+
+.all-rules {
+    padding: 0px 25px;
+    margin-top: 200px;
+    line-height: 1.5;
+}
+
+.rules {
+    padding:10px;
+}
+
+.rules-game1 {
+    padding: 10px 20px;
+    background: #2CB01A;
+    margin: auto;
+}
+
+.how-to-play-game-1 {
+    color:rgb(28, 27, 27)
+}
+
+.rules-game1-list > li, h4 {
+    padding:10px;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.player-list ul li,
+.turn-sequence-list ul li,
+.winning-rules, p {
+    font-size: 10px;
+}
+
+.hide {
+    display:none;
+}
+
+/*CSS for the Game 1!*/
 
 section {
     background-color: white;
@@ -147,8 +190,11 @@ section {
 
 
 footer {
-    background-color: #0A7B79;
-    flex-shrink: 0;
+    background-color: red;
+    position: fixed;
+    bottom: 0;
+    height: 80px;
+    width:100%;
 }
 
 #social-network {
