@@ -13,38 +13,33 @@
     <link rel="stylesheet" href= "assets/css/style.css">
     <title>Document</title>
 </head>
+
 <body>
-    <header>
-        <a href="index.html">
-            <h1> Super Mario Arcade</h1>
-        </a>
-        <input type="checkbox" id="nav-toggle" name="nav-toggle">
-        <label for="nav-toggle" class="nav-toggle-label"><i class="fa-solid fa-bars"></i>
-        </label>
-        <nav>
+    <nav>
+        <div class="navbar">
+            <div class="logo"><h1 id="logo">Super Mario Arcade</h1>
+            </div>
             <ul class="menu">
                 <li><a href="index.html" class="active">Home</a></li>
                 <li><a href="#tic-tac-yahoo" aria-label="Go to the tic-tac-yahoo game">Tic-tac-yahoo</a></li>
                 <li><a href="#game-2" aria-label="Go to the game 2 game">Game 2</a></li>
             </ul>
-        </nav>
-
-    </header>
-
-    <div id="tic-tac-yahoo">
-    <section>
-        <h1 class="game-name" id="game-name">Tic Tac Yahooo!</h1>
-
-        <div class="board" id="board"></div>
-        <p id="info"></p>
-
-        <div class="winning-message" id="winningMessage">
-            <div data-winning-message-text></div>
-            <button id="restartButton">Restart</button>
         </div>
+    </nav>
+
+    <section>
+        <div id="tic-tac-yahoo">
+            <h1 class="game-name" id="game-name">Tic Tac Yahooo!</h1>
+
+            <div class="board" id="board"></div>
+            <p id="info"></p>
     
+            <div class="winning-message" id="winningMessage">
+                <div data-winning-message-text></div>
+                <button id="restartButton">Restart</button>
+            </div>
+        </div>
     </section>
-</div>
 
     <script src="assets/js/script.js"></script>
 </body>
