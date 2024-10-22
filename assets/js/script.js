@@ -66,9 +66,15 @@ function checkScore() {
         }
     });
 
+    const isDraw = [...allSquares].every(square => square.firstChild) && !marioWins && !bowserWins;
+
     // Once a winer is found remove further clicks on each square
     if (marioWins || bowserWins) {
         endGame(marioWins, bowserWins);
+        removeClickEvents();
+    } else if (isDraw) {
+        // Handle draw
+        endGame(false, false, true);
         removeClickEvents();
     }
 }
@@ -85,7 +91,10 @@ function endGame(marioWins, bowserWins) {
         winningMessageTextElement.innerText = "Yahooo Let's Go!";
     } else if (bowserWins) {
         winningMessageTextElement.innerText = "Oooohhh noooo!";
+    } else if (draw) {
+        winningMessageTextElement.innerText = "You have another life! Try again!";
     }
+     
 
     // Show the winning message
     winningMessageElement.classList.add('show');

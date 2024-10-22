@@ -120,6 +120,10 @@ section {
 
 }
 
+#info {
+    font-size: 20px;
+}
+
 .game-name {
     padding-top:20px;
 }

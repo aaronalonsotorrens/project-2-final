@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--fontawesome and google fonts-->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lilita+One&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="assets/css/style.css">
+    <title>Super Mario Arcade</title>
+</head>
+
+<body>
+    <nav>
+        <div class="navbar">
+            <div class="logo">
+                <h1 id="logo">Super Mario Arcade</h1>
+            </div>
+            <ul class="menu">
+                <li><a href="index.html" target="main-page.html" aria-label="Go to the main-page">Home</a></li>
+                <li><a href="tic-tac-yahoo.html" class="active" aria-label="Go to the tic-tac-yahoo game">Tic-tac-yahoo</a></li>
+                <li><a href="mario-shadow-quest.html" aria-label="Go to Mario Shadow Quest game">Mario Shadow Quest</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section>
+        <div id="tic-tac-yahoo">
+            <h1 class="game-name" id="game-name">Tic Tac Yahooo!</h1>
+
+            <div class="board" id="board"></div>
+            <p id="info"></p>
+
+            <div class="winning-message" id="winningMessage">
+                <div data-winning-message-text></div>
+                <button id="restartButton">Restart</button>
+            </div>
+        </div>
+    </section>
+
+    <script src="assets/js/script.js"></script>
+</body>
