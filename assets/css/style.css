@@ -303,6 +303,15 @@ section {
 #option2 {
     background-color: #2CB01A;
 }
+.option-button {
+    font-size: 2rem;
+    background-color:yellow;
+    border: 1px solid black;
+    padding: .25em .5em;
+    cursor: pointer;
+    border-radius: 0.5rem;
+}
+
 
 .button-option button:hover {
     background-color: black;
@@ -316,6 +325,7 @@ footer {
     background-color: red;
     position: fixed;
     bottom: 0;
+    left: 0;
     height: 80px;
     width:100%;
 }
@@ -500,7 +510,7 @@ footer {
 @media screen and (min-width: 1024px)  {
     
     body {
-    height: 100vh;
+    height: 200vh;
     }
 
     #home-page {

@@ -37,16 +37,16 @@
 
             <div class="image-box" id="image-box">
             <!-- <img id="shadow-image" src="./assets/images/yoshi-shadow.jpg" alt="character-shadow-image" width="200"> -->
-            <img id="shadowImage" src="./assets/images/yoshi-shadow.jpg" alt="character-shadow-image" width="200">
+            <img id="shadowImage" src="./assets/images/yoshi-shadow.jpg" alt="character shadow" width="200">
         </div>
     </section>
 
     <div class="options">
-        <button class= "button-option" id="option1" onclick="guess(0)">Option 1</button>
-        <button class= "button-option" id="option2" onclick="guess(1)">Option 2</button>
+        <button class= "option-button" id="option1" onclick="checkOption(0)"></button>
+        <button class= "option-button" id="option2" onclick="checkOption(1)"></button>
     </div>
 
-    <p class="resultMessage"></p>
+    <p class="resultMessage" id="resultMessage"></p>
 
     <footer>
         <ul id="social-network">

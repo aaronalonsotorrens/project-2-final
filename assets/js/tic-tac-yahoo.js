@@ -7,6 +7,7 @@ const winningMessageTextElement = document.querySelector('[data-winning-message-
 const restartButton = document.getElementById('restartButton')
 let start = "mario"
 infoDisplay.textContent = "Mario goes first"
+infoDisplay.style.color = "red"
 
 function createBoard() {
     createCells.forEach((_, index) => {
@@ -29,8 +30,10 @@ function startGame(e) {
     // Alternate between "mario" and "bowser"
     if (start === "mario") {
         start = "bowser";
+        infoDisplay.style.color = "green";
     } else {
         start = "mario";
+        infoDisplay.style.color = "red"
     }
     infoDisplay.textContent = "It is now " + start + "'s go"
 
@@ -66,11 +69,12 @@ function checkScore() {
         }
     });
 
+    // Check if it is a draw wins
     const isDraw = [...allSquares].every(square => square.firstChild) && !marioWins && !bowserWins;
 
     // Once a winer is found remove further clicks on each square
     if (marioWins || bowserWins) {
-        endGame(marioWins, bowserWins);
+        endGame(marioWins, bowserWins, false);
         removeClickEvents();
     } else if (isDraw) {
         // Handle draw
@@ -86,7 +90,7 @@ function removeClickEvents() {
     })
 }
 
-function endGame(marioWins, bowserWins) {
+function endGame(marioWins, bowserWins, draw = false) {
     if (marioWins) {
         winningMessageTextElement.innerText = "Yahooo Let's Go!";
     } else if (bowserWins) {
@@ -111,4 +115,6 @@ function restartGame() {
     board.innerHTML = "";  
 
     createBoard();
+    infoDisplay.textContent = "Mario goes first"
+    infoDisplay.style.color = "red"
 }

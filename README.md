@@ -1,18 +1,16 @@
-# PhD Pathways
+# Super Mario Arcade
 
 ## Introduction
 
 Welcome to my second project, part of the Code Institute Full Stack Development Course. The purpose of this project is to build a responsive website using HTML and CSS while incorporating interactive features using JS.
 
+Super Mario Arcade is an homage to one of the first games I played as a kid and therefore one of my first interactions with coding without being aware of it. Super Mario Arcade two interactive games and a home page that lists the rules for each game. The first one a game called of tic-tac-cross called "Tic-tac-yahoo" due Mario's iconic victory scream once you complete a level. This game is a two player game where one player plays as Mario and the second player plays as Bowser trying to stop Mario from conquering the mushroom kingdom and rescuing peach. Typicals crosses and circles have been replaced with images of mario and bowser to provide a more inmersive feel into the game. Once of the players achieves one of the winning combinations the screen will display a specific sentence and give you the chance to restart the game to continue playing. If neither player wins the game will end in a draw, and a restart button will pop giving the user the chance to start again.
 
+The second game is a guessing game called "Mario Shadow Quest". This game tests the players knowledge on the miriad of characters that exist in the Mario Universe and gives a point for each correct guess. With each correct guess a new image is randomly selected, each image having a correct and incorrect answer. There is a timer which stops the player from continuing playing once the time is up. A restart button then appears to allow the player to play again if they wish.
 
-Welcome to the my first project, part of the Code Institute Full Stack Development Course. The purpose of this project is to build a responsive website using HTML, CSS only.
+Users will be able to navigate through the website using a functional navigation bar, allowing them to take them back to the home page if they need reminded of the rules of the game or would like to explore the other game.
 
-PhD pathways is a project focused on providing academics, with a particular focus for PhD students.
-
-User will be able to navigate throught the website using a functional navigation bar. The website will include a careers section, positive testimonials from PhD graduates and a support section where visitors are able to click to explore resources available to them.
-
-Thank you for visiting PhD pathways.
+Thank you for visiting Super Mario Arcade.
 
 ![alt text][responsive-readme]
 
@@ -36,33 +34,33 @@ The 5 planes of UX are the following:
 
 - As a creator, I want a webpage to be easy to naviagte.
 
-- As a creator, I want the webpage to be user-friendly and responsive. 
+- As a creator, I want the webpage to be user-friendly, responsive and interactive.
 
-- As a creator, I want users to feel excited about the journey ahead, convey positive vibes, and mitigate anxious feelings.
+- As a creator, I want to transmit the user a chilhood-like feeling by creating a space which evokes a nostalgic feeling thanks to the carefully curated CSS and available games for the user to enjoy and have fun with.
 
 2. User stories
 
 - As a user, I want to navigate easily through the different sections of the webpage.
 
-- As a user, I want content to be clear, I want links to work well and to take me content that I want to be interested in.
+- As a user, I want clear guidelines on how the game works, objectives, rules, etc.
+
+- As a user, I want the games to performs well, having each button interactive and responding well and providing a overall nice experience.
+
+- As a user, I want the game to perform well on all devices.
 
 ### The Scope Plane.
 
-For the website there were features I wanted to implement and other I was not able to achieve within the deadline.
+For the website there were key features I wanted to implements and others which unfortunately I was able to include due to time restraints.
 
 **Features implemented upon webpage release**
 
-- Header with a functional navigation bar, allowing users to navigate to different pages.
+- A functional navigation bar which allows the user to naviagte through the website with ease.
 
-- A careers sections showing some of the options available to PhD graduates and hopefully highlighting the wide range of possibilities available.
+- A home page which includes the rules for each game. The rules for each game are hidding behind a button intented to avoid overwhelming the user when entering the website.
 
-- A testimonial sections including people's experiences having made the transition outside of academia in an attempt to convey ease and courage on the visitor.
+- A tic-tac-toe game with images of Mario and Bowser instead of circles and crosses to provide a more inmersive experience into the marioverse.
 
-- A support section including links to material available online to help them achieve their desired goals.
-
-- A sign up page for users to inform on what resources they feel they would find helpful.
-
-- A button to take the user back to the home page after filling out the contact form.
+- A visual quiz game where the user tests their experience on the wide range of mario characters.
 
 - Footer with links to social media.
 
@@ -76,86 +74,72 @@ The following are the list of colours used in this project.
 
 [colors-readme]:./assets/css/images/colors-readme.png
 
-- Color #026670
+- Color #2CB01A
 
-Color of the background in careers, testimonials and support.
+Color of the background in the navigation bar
 
-- Color #edeae5c4
+- Color #red
 
-Background color for the body section.
+Color of the background in the footer
 
-- Color #454b1b
+- Color #white
 
-Color of the background in the join button.
+Color of the background and text within the navigation bar where each game is contained to provide a higher contrast
 
-- Color #029dab89
+- Color #black
 
-Color of the background in the business content.
+Color of the text
 
-- Color #02667089
+- Color #yellow
 
-Color of the background in the IT content.
-
-- Color #D3F2E9
-
-Color of the logo.
-Color of the cover text.
-
-- Color #fce18189
-
-Color of the background in the biotech-industry content.
-
-- Color #0A7B79
-
-Color of the background in the navigation bar.
-
-- Color #ffffff
-
-Color of the navigation bar.
-
-- Color #3a3a3a
-
-Color of the text in the body and the header.
-
-- Color #042322de
-
-Color of the background of the cover-text.
-
-- Color #dbf1f3e4
-
-Color of the background in the testimonials-box.
+Color of the restart button in the tic-tac-yahoo game
 
 **Fonts**
 
-The fonts used in this project are Google Fonts.
+The fonts used in this project are from Google Fonts.
 
 Font
 
-- I used "Lato" as the main font, as it's a user friendly font. The xxx font is easy to read even on the smallest devices and provides a positive user experience.
+- I used "Lilita One" as the main font, as it's a user friendly font. The "Lilita One" font is distinctive bold and highly legible. I believe the chunky and rounded letterforms convey a fun and frienly appearence ideal for a Super Mario Arcade game.
 
 **Images**
 
 Images downloaded for this project are from:
 
-- Pexels
-- Unsplash
-- Google images
-- Pixabay
+- Vecteezy
 
 ### The Skeleton Plane
 
-The more I worked on the project the more than some ideas developed while others were removed.
+The more I worked on the project the further some ideas developed while others were left behind.
 
 Header wireframes
 --------------------
-- The navigation bar has been moved to the left side on mobile devices to keep the navbar tidy and more user-friendly.
-- The elements on the navigation bar will direct the user towards the section of interest to make the website more user-friendly.
+- The navigation bar includes the logo of the website and navigation handles that will direct the user towards the game of interest to make the website more user-friendly.
+- The colors of the navigation bar is the same color of green as the emblematic pipe in mario games.
+- The navigation elements are hidden behing a toggle for easier visualization.
 
-Resource wireframes
+
+
+Home page
 --------------------
-- The careers and support content has been displayed as an in-line block for easier visualization and access.
-- The header in testimonials is displayed on the right and left of the page alternatively in an attempt to keep user engage by having something slightly different. 
-- The support section have links displayed below the images shown which will direct the user towards the content that hopefully will find useful.
+- The index or "Home" page contains the rules for the different games available on the website.
+- The "Home" page contains a description for each game and a list of rules on how to play and the objective for each game.
+- Rules are hidden behind an interactive button which upon being clicked will reveal the rules content for each game. This was done for easier visualization and prevent overwhelming the user visiting the website.
+
+Tic-tac-yahoo page
+--------------------
+- The tic-tac-yahoo page contains a 3x3 grid where the game will take place.
+- Below the grid a sentence indicates which player goes first.
+- Circles and cross have been replaced with images of Mario and Bowser to inmerse the player further into the game.
+- Once either players wins the screen will display a specific sentence and give the user to restart the game. 
+- If neither player wins the game will end in a draw. A restart button will appear allowing the player to play again.
+
+Mario Shadow Quest page
+--------------------
+- The Mario Shadow Quest contains a box containing the silhouette of a Mario character image.
+- The image will be random every time the user enters into the game or starts playing the game.
+- Below the image there are two options with only one of the being the correct option.
+- There is also a score section which records the number of correct and incorrect answers.
 
 ### The Surface Plane
 
@@ -163,9 +147,9 @@ Resource wireframes
 
 #### Naviagtion bar: 
 
-- Navabar is present on every page with exception to the thank you page that pops up once the signup form is completed.
+- Navabar is present on every page.
 - The navabar is fully responsive across all resolutions.
-- Navbar toggles to a hamburger meny on mobile devices.
+- Navbar is a toggle hamburger across all devices.
 
 **Desktop**
 
@@ -190,59 +174,11 @@ Resource wireframes
 
 #### Hero images :
 
-- Chosen to aim to inspire freedom, and a feeling of excitement regarding the career journey ahead.
+- Chosen as it depicts one of Marios most known backgrounds.
 
 ![alt text][Hero-readme]
 
 [Hero-readme]: ./assets/css/images/Hero-readme.png
-
-#### Purpose section :
-
-- The purpose/introduction section shows the purpose of the website. It aims to relate to the type of user who would be searching for the content on the website, and transmit a feeling of comfort and understanding.
-
-![alt text][Purpose-readme]
-
-[Purpose-readme]: ./assets/css/images/Purpose-readme.png
-
-#### Careers content :
-
-- The careers content shows the vast number of career options available to those transitioning outside of a science PhD and foster a feeling of reassurance.
-
-![alt text][careers-readme]
-
-[careers-readme]: ./assets/css/images/careers-readme.png
-
-#### Testimonial content :
-
-- The testimonial content is meant to show the user real experiences of people who come from similar background and demonstrate that such options are indeed possible.
-
-![alt text][testimonials-readme]
-
-[testimonials-readme]: ./assets/css/images/testimonials-readme.png
-
-#### Support content :
-
-- The support content contains an explanation section explaining the purpose of its existence and the introduces the user to material they might find helpful to achieve their goals.
-
-![alt text][support-readme]
-
-[support-readme]: ./assets/css/images/support-readme.png
-
-#### Signup :
-
-- The website includes a signup form for the user to fill to make their voices heard and inform on what resources they feel would be most helpful to help them achieve their goals.
-
-![alt text][signup-readme]
-
-[signup-readme]: ./assets/css/images/signup-readme.png
-
-#### Submit page :
-
-- The submit page will appear once the user completes the signup form.
-
-![alt text][submit-readme]
-
-[submit-readme]: ./assets/css/images/submit-readme.png
 
 #### Technologies Used
 
@@ -309,41 +245,19 @@ During development, webpage was mainly tested on Google Chrome. However, other b
 
 **HTML validator**
 
-- 0 errors
-- 0 warnings
 
-![alt text][HTML-validator]
-
-[HTML-validator]: ./assets/css/images/HTML-validator.png
 
 **CSS validator**
 
-- 0 errors
-- 0 warnings
 
-![alt text][css-validator]
-
-[css-validator]: ./assets/css/images/css-validator.png
 
 **Lighthouse score**
 
-![alt text][lighthouse-score]
 
-[lighthouse-score]: ./assets/css/images/lighthouse-score.png
 
 #### Bugs and Fixes
 
-1. Display of support elements as an in-line block while positioning the text just below kept failing across different screen resoultions.
 
-- Resolved by adjusting padding, margin and width of different elements accordingly across all screens.
-
-2. The button to return home on my submit form was appearing as a bug on the HTML validator due the button element appearing as a descendant of the a element.
-
-![alt text][bug-readme]
-
-[bug-readme]: ./assets/css/images/bug-readme.png
-
-- I learnt that a button was needed in that scenario and the anchor element was sufficient. The issue was resolved my removing the button element.
 
 
 ### Unfixed bugs
