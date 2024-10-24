@@ -33,6 +33,7 @@
     </nav>
     <section>
         <div id="mario-shadow-quest">
+            <h1 class="time-left" id="time-left">10</h1>
             <h1 class="game-name" id="game-name">Mario Shadow Quest</h1>
 
             <div class="image-box" id="image-box">
@@ -44,6 +45,11 @@
     <div class="options">
         <button class= "option-button" id="option1" onclick="checkOption(0)"></button>
         <button class= "option-button" id="option2" onclick="checkOption(1)"></button>
+    </div>
+    <div class="score-area">
+        <p class="scores">Correct Answers <span id="score">0</span></p>
+        <p class="scores">Incorrect Answers <span id="incorrect">0</span></p>
+
     </div>
 
     <p class="resultMessage" id="resultMessage"></p>
