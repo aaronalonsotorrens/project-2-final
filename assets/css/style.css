@@ -108,19 +108,27 @@ section {
 #home-page {
     display:block;
     text-align: center;
+
 }
 
-.all-rules {
-    padding: 0px 25px 15px;
-    margin-top: 200px;
-    line-height: 1.5;
-    border-radius: 0.5rem;
+#home-page ul {
+    list-style: none;
+}
+
+ol {
+    margin-left: 0.2rem;
 }
 
 .rules {
     padding:10px;
     background-color: #ffffff;
     border-radius: 10px;
+    margin-top: 200px;
+    margin-left: auto;
+    line-height: 1.5;
+    border-radius: 0.5rem;
+    width: 18rem;
+    margin-right:auto;
 }
 
 .rules-game1, .rules-game2 {
@@ -128,6 +136,11 @@ section {
     background: #2CB01A;
     border-radius: 0.5rem;
     margin-top: 0.2rem;
+    line-height: 1.5;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0.5rem;
+    width: 16rem;
 }
 
 .rules-game2 {
@@ -383,6 +396,10 @@ footer {
 
 @media screen and (min-width: 768px)  {
 
+    body {
+        height: 200vh;
+    }
+
 
     #nav-toggle:checked + .nav-toggle-label + .menu {
         width: 100%;
@@ -408,14 +425,14 @@ footer {
     }
 
     h3, h4 {
-        font-size: 1.5rem;
+        font-size: 1.8rem;
     }
 
     .rules-game1-list>li,
     .player-list ul li,
     .turn-sequence-list ul li,
     .winning-rules, p {
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     line-height: 2;
 }
 
@@ -427,7 +444,7 @@ footer {
         margin:auto;
     }
 
-    .open-rules-game1 {
+    .open-rules-game1, .open-rules-game2 {
         font-size: 1.5rem;
         border: 1px solid black;
         padding: .25em .5em;
@@ -435,19 +452,40 @@ footer {
         border-radius: 10px;
     }
 
-    .all-rules {
-        padding: 0px 25px 15px;
+    .rules {
+        padding:10px;
+        background-color: #ffffff;
+        border-radius: 10px;
         margin-top: 300px;
         line-height: 1.5;
         border-radius: 0.5rem;
+        width: auto;
     }
 
-    .how-to-play-game-1 {
+    .rules-game1, .rules-game2 {
+        padding: 0px 25px 15px;
+        line-height: 1.5;
+        border-radius: 0.5rem;
+        width: auto;
+    }
+
+
+    .how-to-play-game-1,
+    .how-to-play-game-2  {
         padding: 0px 20px;
         line-height: 1.5;
         margin: auto;
-        width: 34rem;
+        width: auto;
     }
+    
+    .rules-game1-list > li, h4, 
+    .rules-game2-list > li {
+        padding:10px;
+        font-size: 1.4rem;
+        font-weight: bold;
+    }
+    
+ 
 
     /* CSS style for game 1 */
 
@@ -539,7 +577,7 @@ footer {
 @media screen and (min-width: 1024px)  {
     
     body {
-    height: 200vh;
+    height: 220vh;
     }
 
     #home-page {
@@ -549,11 +587,33 @@ footer {
         margin:auto;
     }
 
-    .how-to-play-game-1 {
-        padding: 0px 20px;
-        line-height: 1.5;
+
+    .open-rules-game1, .open-rules-game2 {
+        font-size: 1.5rem;
+    }
+
+
+    .rules {
+        margin-top: 300px;
+        width: auto;
+    }
+
+    .rules-game1, .rules-game2 {
+        width: auto;
+    }
+
+
+    .how-to-play-game-1,
+    .how-to-play-game-2  {
         margin: auto;
-        width: 50rem;
+        width: auto;
+    }
+    
+    .rules-game1-list > li, h4, 
+    .rules-game2-list {
+        padding:10px;
+        font-size: 1.4rem;
+        font-weight: bold;
     }
 
 }
