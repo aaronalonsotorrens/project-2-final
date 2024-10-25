@@ -123,14 +123,19 @@ section {
     border-radius: 10px;
 }
 
-.rules-game1 {
+.rules-game1, .rules-game2 {
     padding: 0px 25px 15px;
     background: #2CB01A;
     border-radius: 0.5rem;
     margin-top: 0.2rem;
 }
 
-.how-to-play-game-1 {
+.rules-game2 {
+    background: goldenrod;
+}
+
+.how-to-play-game-1,
+.how-to-play-game-2 {
     background-color: white;
     color:rgb(28, 27, 27);
     padding: 0px 20px;
@@ -140,7 +145,8 @@ section {
     border-radius: 10px;
 }
 
-.rules-game1-list > li, h4 {
+.rules-game1-list > li, h4, 
+.rules-game2-list {
     padding:10px;
     font-size: 1rem;
     font-weight: bold;
