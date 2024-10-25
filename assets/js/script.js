@@ -4,4 +4,9 @@ function showHideRulesGame1() {
     game1Rules.classList.toggle("hide");
 }
 
-console.log("hello");
+let game2Rules = document.querySelector(".how-to-play-game-2")
+
+function showHideRulesGame2() {
+    game2Rules.classList.toggle("hide");
+}
+
