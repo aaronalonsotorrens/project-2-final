@@ -5,36 +5,39 @@ const gameData = [
     { image: './assets/images/toad-shadow.jpg', options: ['Peach', 'Toad'], correctOption: 1 }
 ];
 
-const timeLeft = document.querySelector('.time-left')
+const timeLeft = document.querySelector('.time-left');
+const startButton = document.getElementById('start-button'); 
 
 let imageIndex;
-let currentTime = 10
-let timerId = null
+let currentTime = 10;
+let timerId = null;
+let countDownTimerId = null;
+let timerStarted = false;
 
 function loadNewImage() {
     imageIndex = Math.floor(Math.random() * gameData.length);
 
     const gameImage = document.getElementById('shadowImage');
-    shadowImage.src = gameData[imageIndex].image;
+    gameImage.src = gameData[imageIndex].image;
 
     //Include text in the button
     document.getElementById('option1').textContent = gameData[imageIndex].options[0];
     document.getElementById('option2').textContent = gameData[imageIndex].options[1];
+
+    //Clear previous result message
+    document.getElementById('resultMessage').textContent = "";
 
 }
 //Function to check if the option is correct
 function checkOption(optionIndex) {
 
     const resultMessage = document.getElementById('resultMessage');
-
     const correctOption = gameData[imageIndex].correctOption;
 
     if (optionIndex === correctOption) {
-        resultMessage.textContent = "Correct Well done";
         resultMessage.style.color = "green";
         incrementScore()
     } else {
-        resultMessage.textContent = "Wrong! Try again.";
         resultMessage.style.color = "red";
         incrementWrongAnswer()
     }
@@ -61,13 +64,24 @@ function countDown() {
     currentTime--
     timeLeft.textContent = currentTime
 
-    if (currentTime == 0) {
-        clearInterval(countDownTimerId)
+    if (currentTime === 0) {
+        clearInterval(countDownTimerId);
         clearInterval(timerId)
         alert('Your final score is ' + document.getElementById("score").innerText);
     }
 }
 
-let countDownTimerId = setInterval(countDown, 1000)
+// Function to start the game
+
+function startGame() {
+    if (!timerStarted) { 
+        loadNewImage();
+        timerStarted = true;
+        countDownTimerId = setInterval(countDown, 1000);
+    }
+}
+
+
+startButton.addEventListener('click', startGame);
 
 window.onload = loadNewImage;

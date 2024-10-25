@@ -143,6 +143,12 @@ ol {
     width: 16rem;
 }
 
+.rules-game1 a, 
+.rules-game2 a {
+    text-decoration: none;
+    color: black;
+}
+
 .rules-game2 {
     background: goldenrod;
 }
@@ -159,7 +165,7 @@ ol {
 }
 
 .rules-game1-list > li, h4, 
-.rules-game2-list {
+.rules-game2-list > li {
     padding:10px;
     font-size: 1rem;
     font-weight: bold;
@@ -167,12 +173,26 @@ ol {
 
 .player-list ul li,
 .turn-sequence-list ul li,
-.winning-rules, p {
+.winning-rules,
+.scoring-rules, p {
     font-size: 1rem;
 }
 
 .hide {
     display:none;
+}
+
+.open-rules-game1, .open-rules-game2,
+.play-game1, .play-game2 {
+    font-size: 1rem;
+    border: 1px solid black;
+    padding: .25em .5em;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+button {
+    margin: 1rem 1.5rem 0rem 1.5rem;
 }
 
 /*CSS for the Game 1!*/
@@ -184,7 +204,10 @@ ol {
     margin-top: 200px;
     padding-bottom: 20px;
     border-radius: 0.2rem;
-    width: 15rem;
+    width: 18rem;
+    height: auto;
+    margin-left: auto;
+    margin-right:auto;
 }
 
 #info {
@@ -209,8 +232,8 @@ ol {
 }
 
 .square {
-    width: 50px;
-    height: 50px;
+    width: 70px;
+    height: 70px;
     border: solid black 1px;
     cursor: pointer;
     display: flex;
@@ -224,8 +247,8 @@ ol {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;   
-    height: 2.5rem;
-    width: 2.5rem;
+    height: 3.5rem;
+    width: 3.5rem;
     box-sizing: border-box;
 }
 
@@ -234,8 +257,8 @@ ol {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;   
-    height: 3rem;
-    width: 3rem;
+    height: 4rem;
+    width: 4rem;
     position: relative;
     box-sizing: border-box;
 }
@@ -354,8 +377,7 @@ ol {
 }
 
 .time-left {
-    font-size:1rem;
-    width: 1%;
+    font-size:1.5rem;
     background-color: #ffffff;
     display: grid;
     justify-content: center;
@@ -365,9 +387,9 @@ ol {
     border-color: black;
 }
 
-
-
-
+.start-button {
+    margin: auto;
+}
 
 
 footer {
@@ -398,6 +420,10 @@ footer {
 
     body {
         height: 200vh;
+    }
+
+    ol {
+        margin-left: 0.8rem;
     }
 
 
@@ -431,7 +457,8 @@ footer {
     .rules-game1-list>li,
     .player-list ul li,
     .turn-sequence-list ul li,
-    .winning-rules, p {
+    .winning-rules,
+    .scoring-rules, p {
     font-size: 1.4rem;
     line-height: 2;
 }
@@ -444,7 +471,8 @@ footer {
         margin:auto;
     }
 
-    .open-rules-game1, .open-rules-game2 {
+    .open-rules-game1, .open-rules-game2,
+    .play-game1, .play-game2 {
         font-size: 1.5rem;
         border: 1px solid black;
         padding: .25em .5em;
@@ -588,7 +616,8 @@ footer {
     }
 
 
-    .open-rules-game1, .open-rules-game2 {
+    .open-rules-game1, .open-rules-game2,
+    .play-game1, .play-game2 {
         font-size: 1.5rem;
     }
 
