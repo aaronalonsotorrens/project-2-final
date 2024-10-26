@@ -31,32 +31,35 @@
             </ul>
         </div>
     </nav>
-    <section>
-        <div id="mario-shadow-quest">
-            <h1 class="time-left" id="time-left">10</h1>
-            <h1 class="game-name" id="game-name">Mario Shadow Quest</h1>
+    <div class="game-container">
+         <section>
 
-            <div class="image-box" id="image-box">
-            <!-- <img id="shadow-image" src="./assets/images/yoshi-shadow.jpg" alt="character-shadow-image" width="200"> -->
-            <img id="shadowImage" src="./assets/images/yoshi-shadow.jpg" alt="character shadow" width="200">
+            <div id="mario-shadow-quest">
+                <h1 class="time-left" id="time-left">Timer: 10</h1>
+                <h1 class="game2-name" id="game2-name">Mario Shadow Quest</h1>
+    
+                <div class="image-box" id="image-box">
+                <!-- <img id="shadow-image" src="./assets/images/yoshi-shadow.jpg" alt="character-shadow-image" width="200"> -->
+                <img id="shadowImage" src="./assets/images/yoshi-shadow.jpg" alt="character shadow" width="200">
+            </div>
+        </section>
+    
+        <div class="options">
+            <button class= "option-button" id="option1" onclick="checkOption(0)"></button>
+            <button class= "option-button" id="option2" onclick="checkOption(1)"></button>
         </div>
-    </section>
-
-    <div class="options">
-        <button class= "option-button" id="option1" onclick="checkOption(0)"></button>
-        <button class= "option-button" id="option2" onclick="checkOption(1)"></button>
-    </div>
-    <div class="score-area">
-        <p class="scores">Correct Answers <span id="score">0</span></p>
-        <p class="scores">Incorrect Answers <span id="incorrect">0</span></p>
-    </div>
-    <button class="start-button" id="start-button">Start Game</button>
-    <div class="winning-message" id="winningMessage">
-        <div data-winning-message-text></div>
-        <button id="restartButton">Restart</button>
+        <div class="score-area">
+            <p class="scores">Correct Answers <span id="score">0</span></p>
+            <p class="scores">Incorrect Answers <span id="incorrect">0</span></p>
+        </div>
+        <button class="start-button" id="start-button">Start Game</button>
+        <div class="winning-message" id="winningMessage">
+            <div data-winning-message-text></div>
+            <button id="restartButton">Restart</button>
+        </div>
+        <p class="resultMessage" id="resultMessage"></p>
     </div>
 
-    <p class="resultMessage" id="resultMessage"></p>
 
     <footer>
         <ul id="social-network">

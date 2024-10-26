@@ -2,7 +2,14 @@ const gameData = [
     { image: './assets/images/yoshi-shadow.jpg', options: ['Yoshi', 'Toad'], correctOption: 0 },
     { image: './assets/images/mario-shadow.jpg', options: ['Luigi', 'Mario'], correctOption: 1 },
     { image: './assets/images/luigi-shadow.jpg', options: ['Luigi', 'Yoshi'], correctOption: 0 },
-    { image: './assets/images/toad-shadow.jpg', options: ['Peach', 'Toad'], correctOption: 1 }
+    { image: './assets/images/daisy-shadow.jpg', options: ['Daisy', 'Peach'], correctOption: 0 },
+    { image: './assets/images/toad-shadow.jpg', options: ['Birdo', 'Toad'], correctOption: 1 },
+    { image: './assets/images/DK-shadow.jpg', options: ['D.Kong', 'Wario'], correctOption: 0 },
+    { image: './assets/images/peach-shadow.jpg', options: ['Rosalina', 'Peach'], correctOption: 1 },
+    { image: './assets/images/boo-shadow.jpg', options: ['Boo', 'Toad'], correctOption: 0 },
+    { image: './assets/images/walluigi-shadow.jpg', options: ['Luigi', 'Walluigi'], correctOption: 1 },
+    { image: './assets/images/wario-shadow.jpg', options: ['Mario', 'Wario'], correctOption: 1 },
+    { image: './assets/images/rosalina-shadow.jpg', options: ['Rosalina', 'Daisy'], correctOption: 0 },
 ];
 
 const timeLeft = document.querySelector('.time-left');
@@ -69,7 +76,7 @@ function countDown() {
 
     if (currentTime === 0) {
         endGame();
-}
+    }
 }
 
 // Function to start the game
@@ -88,7 +95,7 @@ function endGame() {
     timeStarted =false;
 
     const finalScore = document.getElementById("score").innerText;
-    winningMessageTextElement.textContent = "Your final core is ${finalScore}.";
+    winningMessageTextElement.textContent = `Your final score is ${finalScore}`;
 
     winningMessageElement.classList.add('show');
 }
