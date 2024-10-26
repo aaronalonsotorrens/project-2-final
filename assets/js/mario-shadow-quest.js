@@ -65,6 +65,7 @@ const winningMessageTextElement = document.querySelector(
 );
 const restartButton = document.getElementById("restart-button");
 
+
 // Game variables
 let imageIndex;
 let currentTime = 10;
@@ -72,6 +73,7 @@ let timerId = null;
 let countDownTimerId = null;
 let timerStarted = false;
 let highScore = localStorage.getItem("highScore") || 0;
+
 
 // Set the high score on page load
 document.getElementById("high-score-value").textContent = highScore;
@@ -163,6 +165,8 @@ function endGame() {
 function restartGame() {
   window.location.reload();
 }
+
+
 
 // Event listeners
 startButton.addEventListener("click", startGame);
