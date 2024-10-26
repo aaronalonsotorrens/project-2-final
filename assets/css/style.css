@@ -17,33 +17,29 @@ body {
     height: 300vh;
 }
 
+/* Navbar */
 nav {
     position: fixed;
     left: 0;
     top: 0;
     height: 100px;
-    width:100%;
+    width: 100%;
     background: #2CB01A;
-    
 }
-nav .navbar {
+
+.logo a {
+    text-decoration: none;
+    color: black;
+}
+
+.navbar {
     display: flex;
     align-items: center;
     justify-content: space-between;
     height: 100%;
     width: 90%;
-    margin:auto;
+    margin: auto;
     max-width: 1800px;
-}
-
-.logo {
-    font-size: 1rem;
-    font-weight: 400;
-    text-decoration: none;
-    display: flex;
-    text-align: center;
-    justify-content: center;
-    align-items: center;
 }
 
 .menu {
@@ -80,21 +76,19 @@ nav .navbar {
     cursor: pointer;
 }
 
-#nav-toggle:checked + .nav-toggle-label + .menu {
+#nav-toggle:checked+.nav-toggle-label+.menu {
     display: flex;
     flex-direction: column;
     position: absolute;
-    background-color:#2CB01A;
+    background-color: #2CB01A;
     width: 100%;
     left: 0;
     padding: 0 1rem;
     box-shadow: 0 2px 2px #3a3a3a;
     top: 80%;
     height: 5rem;
-    
+
 }
-
-
 
 section {
     display: flex;
@@ -106,7 +100,7 @@ section {
 /*CSS for main page*/
 
 #home-page {
-    display:block;
+    display: block;
     text-align: center;
 
 }
@@ -120,7 +114,7 @@ ol {
 }
 
 .rules {
-    padding:10px;
+    padding: 10px;
     background-color: #ffffff;
     border-radius: 10px;
     margin-top: 200px;
@@ -128,10 +122,11 @@ ol {
     line-height: 1.5;
     border-radius: 0.5rem;
     width: 18rem;
-    margin-right:auto;
+    margin-right: auto;
 }
 
-.rules-game1, .rules-game2 {
+.rules-game1,
+.rules-game2 {
     padding: 0px 25px 15px;
     background: #2CB01A;
     border-radius: 0.5rem;
@@ -143,7 +138,7 @@ ol {
     width: 16rem;
 }
 
-.rules-game1 a, 
+.rules-game1 a,
 .rules-game2 a {
     text-decoration: none;
     color: black;
@@ -156,7 +151,7 @@ ol {
 .how-to-play-game-1,
 .how-to-play-game-2 {
     background-color: white;
-    color:rgb(28, 27, 27);
+    color: rgb(28, 27, 27);
     padding: 0px 20px;
     line-height: 1.5;
     margin: auto;
@@ -164,9 +159,10 @@ ol {
     border-radius: 10px;
 }
 
-.rules-game1-list > li, h4, 
-.rules-game2-list > li {
-    padding:10px;
+.rules-game1-list>li,
+h4,
+.rules-game2-list>li {
+    padding: 10px;
     font-size: 1rem;
     font-weight: bold;
 }
@@ -174,16 +170,19 @@ ol {
 .player-list ul li,
 .turn-sequence-list ul li,
 .winning-rules,
-.scoring-rules, p {
+.scoring-rules,
+p {
     font-size: 1rem;
 }
 
 .hide {
-    display:none;
+    display: none;
 }
 
-.open-rules-game1, .open-rules-game2,
-.play-game1, .play-game2 {
+.open-rules-game1,
+.open-rules-game2,
+.play-game1,
+.play-game2 {
     font-size: 1rem;
     border: 1px solid black;
     padding: .25em .5em;
@@ -197,7 +196,6 @@ button {
 
 /*CSS for the Game 1!*/
 
-
 #tic-tac-yahoo {
     background-color: white;
     padding: 0;
@@ -207,7 +205,7 @@ button {
     width: 18rem;
     height: auto;
     margin-left: auto;
-    margin-right:auto;
+    margin-right: auto;
 }
 
 #info {
@@ -215,15 +213,15 @@ button {
 }
 
 .game-name {
-    padding-top:20px;
+    padding-top: 20px;
 }
 
 .board {
-    display:grid;
-    grid-template-columns: repeat(3,auto);
+    display: grid;
+    grid-template-columns: repeat(3, auto);
     width: 100px;
-    margin-bottom:10px;
-    margin-top:10px;
+    margin-bottom: 10px;
+    margin-top: 10px;
     margin-left: 40px;
     margin-right: 50px;
     justify-items: center;
@@ -246,7 +244,7 @@ button {
     background-image: url('../images/mario.jpeg');
     background-size: cover;
     background-position: center;
-    background-repeat: no-repeat;   
+    background-repeat: no-repeat;
     height: 3.5rem;
     width: 3.5rem;
     box-sizing: border-box;
@@ -256,7 +254,7 @@ button {
     background-image: url('../images/bowser.jpeg');
     background-size: cover;
     background-position: center;
-    background-repeat: no-repeat;   
+    background-repeat: no-repeat;
     height: 4rem;
     width: 4rem;
     position: relative;
@@ -264,11 +262,11 @@ button {
 }
 
 .winning-message {
-    display:none;
+    display: none;
     position: fixed;
-    top:0;
-    left:0;
-    right:0;
+    top: 0;
+    left: 0;
+    right: 0;
     bottom: 0;
     background-color: rgba(0, 0, 0, .9);
     justify-content: center;
@@ -280,7 +278,7 @@ button {
 
 .winning-message button {
     font-size: 2rem;
-    background-color:yellow;
+    background-color: yellow;
     border: 1px solid black;
     padding: .25em .5em;
     cursor: pointer;
@@ -321,7 +319,7 @@ button {
 .image-box {
     background-size: contain;
     background-position: center;
-    background-repeat: no-repeat;   
+    background-repeat: no-repeat;
     box-sizing: border-box;
     display: flex;
     justify-content: center;
@@ -338,7 +336,7 @@ button {
     padding-top: 0.5rem;
 }
 
-#shadowImage {
+#shadow-image {
     height: 90%;
     object-fit: contain;
     max-width: 100%;
@@ -369,8 +367,6 @@ button {
     background-color: #2CB01A;
 }
 
-
-
 .button-option button:hover {
     background-color: black;
     color: white;
@@ -378,7 +374,7 @@ button {
 }
 
 .score-area {
-    font-size:1rem;
+    font-size: 1rem;
     width: 50%;
     background-color: #ffffff;
     display: grid;
@@ -390,7 +386,7 @@ button {
 }
 
 .time-left {
-    font-size:1.2rem;
+    font-size: 1.2rem;
     background-color: #ffffff;
     display: grid;
     justify-content: center;
@@ -406,13 +402,22 @@ button {
     display: flex;
 }
 
+.high-score {
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+
+/* Footer */
 
 footer {
     background-color: red;
     position: fixed;
     bottom: 0;
     left: 0;
-    width:100%;
+    width: 100%;
 }
 
 #social-network {
@@ -431,7 +436,7 @@ footer {
 
 /* Media query: tablets and larger (768px and up) */
 
-@media screen and (min-width: 768px)  {
+@media screen and (min-width: 768px) {
 
     body {
         height: 200vh;
@@ -440,16 +445,15 @@ footer {
     ol {
         margin-left: 0.8rem;
     }
-
-
-    #nav-toggle:checked + .nav-toggle-label + .menu {
+    
+    #nav-toggle:checked+.nav-toggle-label+.menu {
         width: 100%;
         left: 0;
         padding: 0 1rem;
         box-shadow: 0 2px 2px #3a3a3a;
         top: 100%;
         height: 7.2rem;
-        
+
     }
 
     .logo {
@@ -465,7 +469,8 @@ footer {
         font-size: 2rem;
     }
 
-    h3, h4 {
+    h3,
+    h4 {
         font-size: 1.8rem;
     }
 
@@ -473,21 +478,23 @@ footer {
     .player-list ul li,
     .turn-sequence-list ul li,
     .winning-rules,
-    .scoring-rules, p {
-    font-size: 1.4rem;
-    line-height: 2;
-}
-
-
+    .scoring-rules,
+    p {
+        font-size: 1.4rem;
+        line-height: 2;
+    }
+    
     #home-page {
-        display:block;
+        display: block;
         text-align: center;
         width: 40rem;
-        margin:auto;
+        margin: auto;
     }
 
-    .open-rules-game1, .open-rules-game2,
-    .play-game1, .play-game2 {
+    .open-rules-game1,
+    .open-rules-game2,
+    .play-game1,
+    .play-game2 {
         font-size: 1.5rem;
         border: 1px solid black;
         padding: .25em .5em;
@@ -496,7 +503,7 @@ footer {
     }
 
     .rules {
-        padding:10px;
+        padding: 10px;
         background-color: #ffffff;
         border-radius: 10px;
         margin-top: 300px;
@@ -505,7 +512,8 @@ footer {
         width: auto;
     }
 
-    .rules-game1, .rules-game2 {
+    .rules-game1,
+    .rules-game2 {
         padding: 0px 25px 15px;
         line-height: 1.5;
         border-radius: 0.5rem;
@@ -514,22 +522,21 @@ footer {
 
 
     .how-to-play-game-1,
-    .how-to-play-game-2  {
+    .how-to-play-game-2 {
         padding: 0px 20px;
         line-height: 1.5;
         margin: auto;
         width: auto;
     }
-    
-    .rules-game1-list > li, h4, 
-    .rules-game2-list > li {
-        padding:10px;
+
+    .rules-game1-list>li,
+    h4,
+    .rules-game2-list>li {
+        padding: 10px;
         font-size: 1.4rem;
         font-weight: bold;
     }
     
- 
-
     /* CSS style for game 1 */
 
     #tic-tac-yahoo {
@@ -549,7 +556,7 @@ footer {
         width: 100px;
         margin-left: 90px;
     }
-    
+
     .square {
         width: 100px;
         height: 100px;
@@ -561,8 +568,8 @@ footer {
         height: 90px;
         width: 90px;
     }
-    
-    .bowser {   
+
+    .bowser {
         height: 90px;
         width: 90px;
     }
@@ -571,7 +578,7 @@ footer {
         font-size: 5rem;
 
     }
-    
+
     .winning-message button {
         font-size: 3rem;
     }
@@ -588,21 +595,21 @@ footer {
     }
 
     .time-left {
-        font-size:1.5rem;
+        font-size: 1.5rem;
     }
 
     .game2-name {
         padding-top: 0.5rem;
         font-size: 2.5rem;
     }
-    
+
     .image-box {
         padding: 2rem;
         width: 300px;
         height: 300px;
     }
-    
-    #shadowImage {
+
+    #shadow-image {
         height: 90%;
         object-fit: contain;
         max-width: 200%;
@@ -613,7 +620,7 @@ footer {
         display: flex;
         justify-content: center;
         border-radius: 10px;
-    
+
     }
 
     .option-button {
@@ -625,11 +632,11 @@ footer {
     #option1 {
         background-color: red;
     }
-    
+
     #option2 {
         background-color: #2CB01A;
     }
-    
+
     .button-option button:hover {
         background-color: black;
         color: white;
@@ -640,52 +647,55 @@ footer {
         font-size: 1.5rem;
     }
 
+    .high-score {
+        font-size: 1.5rem;
+    }
+
 }
 
 /* Media query: tablets and larger (1024px and up) */
 
-@media screen and (min-width: 1024px)  {
-    
+@media screen and (min-width: 1024px) {
+
     body {
-    height: 220vh;
+        height: 220vh;
     }
 
     #home-page {
-        display:block;
+        display: block;
         text-align: center;
         width: 56rem;
-        margin:auto;
+        margin: auto;
     }
-
-
-    .open-rules-game1, .open-rules-game2,
-    .play-game1, .play-game2 {
+    
+    .open-rules-game1,
+    .open-rules-game2,
+    .play-game1,
+    .play-game2 {
         font-size: 1.5rem;
     }
-
-
+    
     .rules {
         margin-top: 300px;
         width: auto;
     }
 
-    .rules-game1, .rules-game2 {
-        width: auto;
-    }
-
-
-    .how-to-play-game-1,
-    .how-to-play-game-2  {
-        margin: auto;
+    .rules-game1,
+    .rules-game2 {
         width: auto;
     }
     
-    .rules-game1-list > li, h4, 
+    .how-to-play-game-1,
+    .how-to-play-game-2 {
+        margin: auto;
+        width: auto;
+    }
+
+    .rules-game1-list>li,
+    h4,
     .rules-game2-list {
-        padding:10px;
+        padding: 10px;
         font-size: 1.4rem;
         font-weight: bold;
     }
-
 }
-

@@ -19,7 +19,7 @@
     <nav>
         <div class="navbar">
             <div class="logo">
-                <h1 id="logo">Super Mario Arcade</h1>
+                <h1 id="logo"><a href="index.html">Super Mario Arcade</a></h1>
             </div>
             <input type="checkbox" id="nav-toggle" name="nav-toggle">
             <label for="nav-toggle" class="nav-toggle-label"><i class="fa-solid fa-bars"></i>
@@ -36,12 +36,12 @@
         <section>
 
             <div id="mario-shadow-quest">
-                <h1 class="time-left" id="time-left">Timer: 10</h1>
+                <h1 class="time-left" id="time-left">Timer: 10s</h1>
                 <h1 class="game2-name" id="game2-name">Mario Shadow Quest</h1>
 
                 <div class="image-box" id="image-box">
                     <!-- <img id="shadow-image" src="./assets/images/yoshi-shadow.jpg" alt="character-shadow-image" width="200"> -->
-                    <img id="shadowImage" src="./assets/images/yoshi-shadow.jpg" alt="character shadow" width="200">
+                    <img id="shadow-image" src="./assets/images/yoshi-shadow.jpg" alt="character shadow" width="200">
                 </div>
         </section>
 
@@ -53,12 +53,16 @@
             <p class="scores">Correct Answers <span id="score">0</span></p>
             <p class="scores">Incorrect Answers <span id="incorrect">0</span></p>
         </div>
+        <div class="high-score">
+            <span>High Score: </span><span id="high-score-value"> 0</span>
+        </div>
+
         <button class="start-button" id="start-button">Start Game</button>
         <div class="winning-message" id="winningMessage">
             <div data-winning-message-text></div>
-            <button id="restartButton">Restart</button>
+            <button id="restart-button">Try again!</button>
         </div>
-        <p class="resultMessage" id="resultMessage"></p>
+        <p class="result-message" id="result-message"></p>
     </div>
 
 
