@@ -40,8 +40,8 @@ const gameData = [
       correctOption: 0,
   },
   {
-      image: "./assets/images/walluigi-shadow.jpg",
-      options: ["Luigi", "Walluigi"],
+      image: "./assets/images/waluigi-shadow.jpg",
+      options: ["Luigi", "Waluigi"],
       correctOption: 1,
   },
   {
