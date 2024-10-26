@@ -7,6 +7,9 @@ const gameData = [
 
 const timeLeft = document.querySelector('.time-left');
 const startButton = document.getElementById('start-button'); 
+const winningMessageElement = document.getElementById('winningMessage')
+const winningMessageTextElement = document.querySelector('[data-winning-message-text]')
+const restartButton = document.getElementById('restartButton')
 
 let imageIndex;
 let currentTime = 10;
@@ -65,10 +68,8 @@ function countDown() {
     timeLeft.textContent = currentTime
 
     if (currentTime === 0) {
-        clearInterval(countDownTimerId);
-        clearInterval(timerId)
-        alert('Your final score is ' + document.getElementById("score").innerText);
-    }
+        endGame();
+}
 }
 
 // Function to start the game
@@ -77,11 +78,24 @@ function startGame() {
     if (!timerStarted) { 
         loadNewImage();
         timerStarted = true;
+        currentTime = 10;
         countDownTimerId = setInterval(countDown, 1000);
     }
 }
 
+function endGame() {
+    clearInterval(countDownTimerId);
+    timeStarted =false;
+
+    const finalScore = document.getElementById("score").innerText;
+    winningMessageTextElement.textContent = "Your final core is ${finalScore}.";
+
+    winningMessageElement.classList.add('show');
+}
+
+function restartGame() {
+    window.location.reload();
+}
 
 startButton.addEventListener('click', startGame);
-
-window.onload = loadNewImage;
+restartButton.addEventListener('click', restartGame);
