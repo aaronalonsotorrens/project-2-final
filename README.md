@@ -390,7 +390,7 @@ During development, webpage was mainly tested on Google Chrome. However, other b
 
 ### Unfixed bugs
 
-Although it’s not a bug in Mario Shadow Quest, the same image might appear multiple times in a single game. Given more time, I would have researched how to ensure that every image is shown once before any image repeats.
+Although it’s not a bug in "Mario Shadow Quest", the same image might appear multiple times in a single game. Given more time, I would have researched how to ensure that every image is shown once before any image repeats.
 
 ### Deployment
 
@@ -402,10 +402,10 @@ The master branch of this repository is the most current version and has been us
 
 #### Credits
 
-1. Code to build the home-page:
+1. Code to build the Home page:
 - Interactive buttons for the rules was adapted from "CodeWellTech" from the video: Hide and Show Div / Element using JavaScript Css | Explained toggle function | Beginners Guide #001.
 
-2. Code to build tic-tac-yahoo:
+2. Code to build Tic-tac-yahoo:
 - Code adapted from "Code with Ania Kubow" from the video: Tic Tac Toe in Javascript.
 - Additional features like the display message upon the game ending was adapted from "Web Dev Simplified" from the video: Build Tic Tac Toe with JavaScript.
 
