@@ -379,11 +379,11 @@ During development, webpage was mainly tested on Google Chrome. However, other b
 
 #### Bugs and Fixes
 
-1. The restart button in Tic-tac-yahoo was particularly challenging, as I wanted to clear the board without simply refreshing the page. I tried multiple approaches, but either the board wouldn’t clear, or the restart button wouldn’t function properly.
+1. The restart button in "Tic-tac-yahoo" was particularly challenging, as I wanted to clear the board without simply refreshing the page. I tried multiple approaches, but either the board wouldn’t clear, or the restart button wouldn’t function properly.
 
 - This was resolved by creating a new empty string for each square, then calling back the function to generate a new board, which successfully addressed the issue.
 
-2. In Game 2, there were a few bugs where images wouldn’t change after an option was selected, sometimes causing the image to remain static. Additionally, there were styling issues with image alignment across different devices.
+2. In "Mario shadow quest", there were a few bugs where images wouldn’t change after an option was selected, sometimes causing the image to remain static. Additionally, there were styling issues with image alignment across different devices.
 
 - The first issue was resolved by adjusting the image loading time; initially, it was set too high, causing clicks to outpace the image load time.
 - The styling issue was resolved thanks to my mentor's advice to set a specific width for the images and apply left and right margins set to auto, ensuring images always stayed centered.
