@@ -390,7 +390,7 @@ During development, webpage was mainly tested on Google Chrome. However, other b
 
 ### Unfixed bugs
 
-While not a bug in "Mario Shadow Quest" the same image might appear multiple times during one game. Given more time I would have researched how to be able to write code so that every image must be run once before an image repeats itself.
+Although it’s not a bug in Mario Shadow Quest, the same image might appear multiple times in a single game. Given more time, I would have researched how to ensure that every image is shown once before any image repeats.
 
 ### Deployment
 
