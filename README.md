@@ -331,6 +331,33 @@ During development, webpage was mainly tested on Google Chrome. However, other b
 
 [css-validator]: ./assets/images/css-validator.png
 
+**JShint for Home page**
+
+- 0 errors
+- 2 warnings - Both functions shown here are used in the HTML file. This indicates not being an actual error.
+
+![alt text][jshint-script]
+
+[jshint-script]: ./assets/images/jshint-script.png
+
+**JShint for tic-tac-yahoo**
+
+- 0 errors
+- 5 warnings - All warnings are indicating that certain aspects of the code are only available in certain version. No actual error.
+
+![alt text][jshint-tic-tac-yahoo]
+
+[jshint-tic-tac-yahoo]: ./assets/images/jshint-tic-tac-yahoo.png
+
+**JShint for mario shadow quest**
+
+- 0 errors
+- 1 warnings - checkOption is being used via onclick events in the HTML. No actual error.
+
+![alt text][jshint-mario-shadow-quest]
+
+[jshint-mario-shadow-quest]: ./assets/images/jshint-mario-shadow-quest.png
+
 **Lighthouse score**
 
 ![alt text][index-mobile-lighthouse]
@@ -359,7 +386,9 @@ During development, webpage was mainly tested on Google Chrome. However, other b
 
 ### Unfixed bugs
 
-No unfixed bugs.
+While not a bug in game 2 the same image might appear multiple times during one game. Given more time I would have researched how to be able to write code so that every image must be run once before an image repeats itself.
+
+### Deployment
 
 The master branch of this repository is the most current version and has been used for the deployed version of the site.
 
