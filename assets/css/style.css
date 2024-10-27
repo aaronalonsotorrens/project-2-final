@@ -434,7 +434,7 @@ footer {
     color: #ffffff;
 }
 
-/* Media query: tablets and larger (768px and up) */
+/* Media query: Tablets and larger (768px and up) */
 
 @media screen and (min-width: 768px) {
 
@@ -653,7 +653,7 @@ footer {
 
 }
 
-/* Media query: tablets and larger (1024px and up) */
+/* Media query: Tablets and larger (1024px and up) */
 
 @media screen and (min-width: 1024px) {
 
