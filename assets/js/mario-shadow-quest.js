@@ -69,7 +69,6 @@ const restartButton = document.getElementById("restart-button");
 // Game variables
 let imageIndex;
 let currentTime = 10;
-let timerId = null;
 let countDownTimerId = null;
 let timerStarted = false;
 let highScore = localStorage.getItem("highScore") || 0;
