@@ -1,15 +1,20 @@
+//Globals constants and variables
 const board = document.querySelector("#board");
 const infoDisplay = document.querySelector("#info");
-
-let createCells = ["", "", "", "", "", "", "", "", ""];
 const winningMessageElement = document.getElementById("winningMessage");
 const winningMessageTextElement = document.querySelector(
-  "[data-winning-message-text]",
+  "[data-winning-message-text]"
 );
 const restartButton = document.getElementById("restartButton");
+
+let createCells = ["", "", "", "", "", "", "", "", ""];
 let start = "mario";
 infoDisplay.textContent = "Mario goes first";
 infoDisplay.style.color = "red";
+
+// Game setup
+createBoard();
+restartButton.addEventListener("click", restartGame);
 
 function createBoard() {
   createCells.forEach((_, index) => {
@@ -21,8 +26,7 @@ function createBoard() {
   });
 }
 
-createBoard();
-
+// Main game logic
 function startGame(e) {
   console.log("clicked", e.target);
   const startDisplay = document.createElement("div");
@@ -45,6 +49,7 @@ function startGame(e) {
   checkScore();
 }
 
+// Check for a win or draw
 function checkScore() {
   const allSquares = document.querySelectorAll(".square");
   const winningCombos = [
@@ -65,7 +70,7 @@ function checkScore() {
   winningCombos.forEach((array) => {
     if (
       array.every((cell) =>
-        allSquares[cell].firstChild?.classList.contains("mario"),
+        allSquares[cell].firstChild?.classList.contains("mario")
       )
     ) {
       marioWins = true;
@@ -76,7 +81,7 @@ function checkScore() {
   winningCombos.forEach((array) => {
     if (
       array.every((cell) =>
-        allSquares[cell].firstChild?.classList.contains("bowser"),
+        allSquares[cell].firstChild?.classList.contains("bowser")
       )
     ) {
       bowserWins = true;
@@ -89,29 +94,22 @@ function checkScore() {
     !marioWins &&
     !bowserWins;
 
-  // Once a winer is found remove further clicks on each square
+  // Once a winner is confirmed, remove further clicks on each square
   if (marioWins || bowserWins) {
     endGame(marioWins, bowserWins, false);
     removeClickEvents();
   } else if (isDraw) {
-    // Handle draw
     endGame(false, false, true);
     removeClickEvents();
   }
 }
 
-function removeClickEvents() {
-  const allSquares = document.querySelectorAll(".square");
-  allSquares.forEach((square) => {
-    square.removeEventListener("click", startGame);
-  });
-}
-
+// End game end and display result
 function endGame(marioWins, bowserWins, draw = false) {
   if (marioWins) {
     winningMessageTextElement.innerText = "Yahooo Let's Go!";
   } else if (bowserWins) {
-    winningMessageTextElement.innerText = "Oooohhh noooo!";
+    winningMessageTextElement.innerText = "Bwahaha! Bowser wins";
   } else if (draw) {
     winningMessageTextElement.innerText = "You have another life! Try again!";
   }
@@ -120,9 +118,15 @@ function endGame(marioWins, bowserWins, draw = false) {
   winningMessageElement.classList.add("show");
 }
 
-// Restart game and reset the board
-restartButton.addEventListener("click", restartGame);
+// Remove click events from each square
+function removeClickEvents() {
+  const allSquares = document.querySelectorAll(".square");
+  allSquares.forEach((square) => {
+    square.removeEventListener("click", startGame);
+  });
+}
 
+// Restart game and reset the board
 function restartGame() {
   winningMessageElement.classList.remove("show");
   createCells = ["", "", "", "", "", "", "", "", ""];

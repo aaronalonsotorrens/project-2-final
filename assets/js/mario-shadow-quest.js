@@ -1,3 +1,4 @@
+//Globals constants and variables
 const gameData = [
   {
       image: "./assets/images/yoshi-shadow.jpg",
@@ -91,7 +92,7 @@ function loadNewImage() {
   document.getElementById("option2").textContent =
       gameData[imageIndex].options[1];
 
-  // Clear previous result message
+  // Clear previous result 
   document.getElementById("result-message").textContent = "";
 }
 
@@ -112,7 +113,7 @@ function checkOption(optionIndex) {
   setTimeout(loadNewImage, 200);
 }
 
-// Score management functions
+// Scoring functions
 function incrementScore() {
   let oldScore = parseInt(document.getElementById("score").innerText);
   document.getElementById("score").innerHTML = ++oldScore;
@@ -164,8 +165,6 @@ function endGame() {
 function restartGame() {
   window.location.reload();
 }
-
-
 
 // Event listeners
 startButton.addEventListener("click", startGame);

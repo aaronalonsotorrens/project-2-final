@@ -1,3 +1,4 @@
+//Globals constants and variables
 let game1Rules = document.querySelector(".how-to-play-game-1");
 let game2Rules = document.querySelector(".how-to-play-game-2");
 
