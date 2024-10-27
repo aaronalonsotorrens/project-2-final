@@ -304,7 +304,7 @@ During development, webpage was mainly tested on Google Chrome. However, other b
 
 [index-W3C-validator]: ./assets/images/index-W3C-validator.png
 
-**HTML validator for Game 1**
+**HTML validator for Tic-tac-yahoo**
 
 - 0 errors
 - 0 warnings
@@ -313,7 +313,7 @@ During development, webpage was mainly tested on Google Chrome. However, other b
 
 [tic-tac-yahoo-W3C-validator]: ./assets/images/tic-tac-yahoo-W3C-validator.png
 
-**HTML validator for Game 2**
+**HTML validator for Mario shadow quest**
 
 - 0 errors
 - 0 warnings
@@ -340,7 +340,7 @@ During development, webpage was mainly tested on Google Chrome. However, other b
 
 [jshint-script]: ./assets/images/jshint-script.png
 
-**JShint for tic-tac-yahoo**
+**JShint for Tic-tac-yahoo**
 
 - 0 errors
 - 5 warnings - All warnings are indicating that certain aspects of the code are only available in certain version. No actual error.
@@ -349,7 +349,7 @@ During development, webpage was mainly tested on Google Chrome. However, other b
 
 [jshint-tic-tac-yahoo]: ./assets/images/jshint-tic-tac-yahoo.png
 
-**JShint for mario shadow quest**
+**JShint for Mario shadow quest**
 
 - 0 errors
 - 1 warnings - checkOption is being used via onclick events in the HTML. No actual error.
@@ -358,15 +358,19 @@ During development, webpage was mainly tested on Google Chrome. However, other b
 
 [jshint-mario-shadow-quest]: ./assets/images/jshint-mario-shadow-quest.png
 
-**Lighthouse score**
+**Lighthouse score for Home page**
 
 ![alt text][index-mobile-lighthouse]
 
 [index-mobile-lighthouse]: ./assets/images/index-mobile-lighthouse.png
 
+**Lighthouse score for Tic-tac-yahoo game**
+
 ![alt text][tic-tac-yahoo-mobile-lighthouse]
 
 [tic-tac-yahoo-mobile-lighthouse]: ./assets/images/tic-tac-yahoo-mobile-lighthouse.png
+
+**Lighthouse score for Mario shadow quest game**
 
 ![alt text][mario-shadow-quest-mobile-lighthouse]
 

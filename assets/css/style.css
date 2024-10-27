@@ -194,7 +194,7 @@ button {
     margin: 1rem 1.5rem 0rem 1.5rem;
 }
 
-/*CSS for the Game 1!*/
+/*CSS for tic-tac-yahoo!*/
 
 #tic-tac-yahoo {
     background-color: white;
@@ -296,7 +296,7 @@ button {
     display: flex;
 }
 
-/*CSS for the Game 2!*/
+/*CSS for mario shadow quest*/
 
 .game-container {
     background-color: #ffffff;
@@ -537,7 +537,7 @@ footer {
         font-weight: bold;
     }
     
-    /* CSS style for game 1 */
+    /* CSS style for tic-tac-yahoo */
 
     #tic-tac-yahoo {
         background-color: white;
@@ -583,7 +583,7 @@ footer {
         font-size: 3rem;
     }
 
-    /* CSS game 2 */
+    /* CSS for mario shadow quest */
 
     .game-container {
         width: 30rem;
