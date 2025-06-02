@@ -28,7 +28,6 @@ function createBoard() {
 
 // Main game logic
 function startGame(e) {
-  console.log("clicked", e.target);
   const startDisplay = document.createElement("div");
   startDisplay.classList.add(start);
   e.target.append(startDisplay);
