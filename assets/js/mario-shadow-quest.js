@@ -99,14 +99,21 @@ function loadNewImage() {
 // Function to check if the selected option is correct
 function checkOption(optionIndex) {
   const resultMessage = document.getElementById("result-message");
+
+  // Ensure that imageIndex and correctOption are valid
+  if (imageIndex === undefined || !gameData[imageIndex]) {
+    console.error("Invalid image index. Please load a new image.");
+    return;
+  }
+
   const correctOption = gameData[imageIndex].correctOption;
 
   if (optionIndex === correctOption) {
-      resultMessage.style.color = "green";
-      incrementScore();
+    resultMessage.style.color = "green";
+    incrementScore();
   } else {
-      resultMessage.style.color = "red";
-      incrementWrongAnswer();
+    resultMessage.style.color = "red";
+    incrementWrongAnswer();
   }
 
   // Delay loading a new image for better UX
@@ -126,11 +133,14 @@ function incrementWrongAnswer() {
 
 // Countdown timer function
 function countDown() {
-  currentTime--;
-  timeLeft.textContent = "Timer: " + currentTime + "s"; 
+  if (currentTime > 0) {
+    currentTime--;
+    timeLeft.textContent = "Timer: " + currentTime + "s";
+  }
 
   if (currentTime === 0) {
-      endGame();
+    clearInterval(countDownTimerId); // Stop the timer properly
+    endGame();
   }
 }
 
@@ -139,31 +149,51 @@ function startGame() {
   if (!timerStarted) {
       loadNewImage();
       timerStarted = true;
-      currentTime = 10;
+      timeLeft.textContent = "Timer: " + currentTime + "s";
       countDownTimerId = setInterval(countDown, 1000);
   }
 }
 
 // End game function
+
 function endGame() {
   clearInterval(countDownTimerId);
   timerStarted = false;
 
-  const finalScore = document.getElementById("score").innerText;
+  const finalScore = parseInt(document.getElementById("score").innerText); // Convert to number
 
-  //Check if the final score is a new high score
-  if (finalScore > highScore) {
+  // Check if the final score is a new high score
+  if (finalScore > parseInt(highScore)) { // Ensure correct comparison
     highScore = finalScore;
     localStorage.setItem("highScore", highScore);
-    document.getElementById("high-score").textContent = highScore;
+    document.getElementById("high-score-value").textContent = highScore;
   }
+
+  // Display final score message and show restart option
   winningMessageTextElement.textContent = `Your final score is ${finalScore}`;
-  winningMessageElement.classList.add("show");
+  winningMessageElement.classList.add("show"); // Ensure the message box appears
+
+  // Ensure the restart button is visible
+  restartButton.style.display = "block"; 
 }
 
 // Restart game function
+
 function restartGame() {
-  window.location.reload();
+  clearInterval(countDownTimerId); // Stop any running timer
+
+  // Reset UI elements
+  document.getElementById("score").innerText = "0";
+  document.getElementById("incorrect").innerText = "0";
+  currentTime = 10;
+  timeLeft.textContent = "Timer: " + currentTime + "s";
+  winningMessageElement.classList.remove("show"); // Hide final score message
+  restartButton.style.display = "none"; // Optional: hide restart button again
+
+  // Reset game state
+  timerStarted = false; // So startGame can work again when clicked
+
+  // Wait for user to click Start Game manually
 }
 
 // Event listeners
