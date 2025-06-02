@@ -17,6 +17,22 @@ body {
     min-height: 300vh;
 }
 
+/* General default for all text elements */
+body, button, a {
+    color: black;
+}
+
+button, .open-rules-game1, .open-rules-game2, .play-game1, .play-game2, .option-button {
+    color: black;
+}
+
+/* Prevent Safari from auto-link styling */
+a {
+    -webkit-text-decoration-skip: none;
+    text-decoration: none;
+    color: black;
+}
+
 /* Navbar */
 nav {
     position: fixed;
