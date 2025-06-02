@@ -426,7 +426,7 @@ footer {
 
 #social-network {
     text-align: center;
-    padding: 20px 0;
+    padding: 10px 0;
     display: flex;
     justify-content: space-evenly;
     list-style-type: none;
@@ -662,7 +662,7 @@ footer {
 @media screen and (min-width: 1024px) {
 
     body {
-        height: 220vh;
+        height: 100vh;
     }
 
     #home-page {
