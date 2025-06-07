@@ -68,6 +68,7 @@ const option2Button = document.getElementById("option2");
 
 // Game variables
 let imageIndex;
+let previousImageIndex = -1;
 let currentTime = 10;
 let countDownTimerId = null;
 let timerStarted = false;
@@ -89,7 +90,15 @@ function enableOptions() {
 
 // Main game functions
 function loadNewImage() {
-  imageIndex = Math.floor(Math.random() * gameData.length);
+  let newIndex;
+
+  // Keep generating a new index until it's different from the last one
+  do {
+    newIndex = Math.floor(Math.random() * gameData.length);
+  } while (newIndex === previousImageIndex);
+
+  imageIndex = newIndex;
+  previousImageIndex = newIndex; // Update previous for next round
 
   const gameImage = document.getElementById("shadow-image");
   gameImage.src = gameData[imageIndex].image;
