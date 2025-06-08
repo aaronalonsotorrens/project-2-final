@@ -388,10 +388,6 @@ During development, webpage was mainly tested on Google Chrome. However, other b
 - The first issue was resolved by adjusting the image loading time; initially, it was set too high, causing clicks to outpace the image load time.
 - The styling issue was resolved thanks to my mentor's advice to set a specific width for the images and apply left and right margins set to auto, ensuring images always stayed centered.
 
-### Unfixed bugs
-
-Although it’s not a bug in "Mario Shadow Quest", the same image might appear multiple times in a single game. Given more time, I would have researched how to ensure that every image is shown once before any image repeats.
-
 ### Deployment
 
 The master branch of this repository is the most current version and has been used for the deployed version of the site.
