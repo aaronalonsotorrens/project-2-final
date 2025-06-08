@@ -18,23 +18,20 @@ body {
 }
 
 /* Buttons */
-a, button {
-    -webkit-appearance: none;
-    appearance: none;
-    -webkit-tap-highlight-color: transparent;
-    text-decoration: none;
-  }
-  
-  /* Ensure links and buttons don't override your intended colors */
-  a,
-  a:visited,
-  a:focus,
-  a:active,
-  button:focus,
-  button:active {
+body, button, a {
     color: black;
+}Add commentMore actions
+
+button, .open-rules-game1, .open-rules-game2, .play-game1, .play-game2, .option-button {
+    color: black;
+}
+
+/* Prevent Safari from auto-link styling */
+a {
+    -webkit-text-decoration-skip: none;
     text-decoration: none;
-  }
+    color: black;
+}
 
 /* Navbar */
 nav {
