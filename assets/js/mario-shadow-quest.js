@@ -98,7 +98,7 @@ function loadNewImage() {
   } while (newIndex === previousImageIndex);
 
   imageIndex = newIndex;
-  previousImageIndex = newIndex; // Update previous for next round
+  previousImageIndex = newIndex; 
 
   const gameImage = document.getElementById("shadow-image");
   gameImage.src = gameData[imageIndex].image;
@@ -155,7 +155,7 @@ function countDown() {
 function startGame() {
   if (!timerStarted) {
     loadNewImage();
-    enableOptions(); // Enable buttons when game starts
+    enableOptions(); 
     timerStarted = true;
     timeLeft.textContent = "Timer: " + currentTime + "s";
     countDownTimerId = setInterval(countDown, 1000);
@@ -165,7 +165,7 @@ function startGame() {
 function endGame() {
   clearInterval(countDownTimerId);
   timerStarted = false;
-  disableOptions(); // Disable buttons after game ends
+  disableOptions();
 
   const finalScore = parseInt(document.getElementById("score").innerText);
 
@@ -192,7 +192,7 @@ function restartGame() {
 
   timerStarted = false;
 
-  disableOptions(); // Keep buttons disabled until user clicks Start
+  disableOptions(); 
 }
 
 // Event listeners
@@ -201,5 +201,5 @@ restartButton.addEventListener("click", restartGame);
 option1Button.addEventListener("click", () => checkOption(0));
 option2Button.addEventListener("click", () => checkOption(1));
 
-// Initial setup
-disableOptions(); // Disable buttons before game starts
+// Disable buttons before game starts
+disableOptions();
