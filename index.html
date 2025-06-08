@@ -1,127 +1,235 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!--Meta content-->
-    <meta name="description"
-    content="Super Mario Arcade is a website containing two interactive mario-based games meant for the user to have a fun time and evoque in the user a childhood-like feeling">
-    <meta name="keywords" content="Mario, games, rules, play">
+    <meta
+      name="description"
+      content="Super Mario Arcade is a website containing two interactive mario-based games meant for the user to have a fun time and evoque in the user a childhood-like feeling"
+    />
+    <meta name="keywords" content="Mario, games, rules, play" />
 
     <!--fontawesome and google fonts-->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lilita+One&display=swap" rel="stylesheet">
-    <link rel='shortcut icon' type='image/x-icon' href='favicon.ico' />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lilita+One&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
 
     <!--Stylesheet-->
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/style.css" />
 
     <!--Title-->
     <title>Super Mario Arcade</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <nav>
-        <div class="navbar">
-            <div class="logo">
-                <h1 id="logo"><a href="index.html">Super Mario Arcade</a></h1>
-            </div>
-            <input type="checkbox" id="nav-toggle" name="nav-toggle">
-            <label for="nav-toggle" class="nav-toggle-label"><i class="fa-solid fa-bars"></i></label>
-            <ul class="menu">
-                <li><a href="index.html" class="active" aria-label="Go to the main-page">Home</a></li>
-                <li><a href="tic-tac-yahoo.html" aria-label="Go to the tic-tac-yahoo game">Tic-tac-yahoo</a></li>
-                <li><a href="mario-shadow-quest.html" aria-label="Go to Mario Shadow Quest game">Mario Shadow Quest</a></li>
-            </ul>
+      <div class="navbar">
+        <div class="logo">
+          <h1 id="logo"><a href="index.html">Super Mario Arcade</a></h1>
         </div>
+        <input type="checkbox" id="nav-toggle" name="nav-toggle" />
+        <label for="nav-toggle" class="nav-toggle-label"
+          ><i class="fa-solid fa-bars"></i
+        ></label>
+        <ul class="menu">
+          <li>
+            <a href="index.html" class="active" aria-label="Go to the main-page"
+              >Home</a
+            >
+          </li>
+          <li>
+            <a
+              href="tic-tac-yahoo.html"
+              aria-label="Go to the tic-tac-yahoo game"
+              >Tic-tac-yahoo</a
+            >
+          </li>
+          <li>
+            <a
+              href="mario-shadow-quest.html"
+              aria-label="Go to Mario Shadow Quest game"
+              >Mario Shadow Quest</a
+            >
+          </li>
+        </ul>
+      </div>
     </nav>
 
     <!--List games available and explain rules-->
     <section id="home-page">
-        <div class="rules">
-            <h2>Rules</h2>
-        </div>
+      <div class="rules">
+        <h2>Rules</h2>
+      </div>
 
-        <div class="rules-game1">
-            <h3>Tic-tac-Yahooo (2 Players)</h3>
-            <p>Welcome to the Mario vs. Bowser Tic-Tac-Yahoooo Showdown! In this exciting twist on the classic game, Mario and Bowser face off for ultimate control over the Mushroom Kingdom!</p>
-            <button onclick="showHideRulesGame1()" class="open-rules-game1">Rules</button>
-            <a href="tic-tac-yahoo.html" class="play-game1">Play!</a>
-        </div>
+      <div class="rules-game1">
+        <h3>Tic-tac-Yahooo (2 Players)</h3>
+        <p>
+          Welcome to the Mario vs. Bowser Tic-Tac-Yahoooo Showdown! In this
+          exciting twist on the classic game, Mario and Bowser face off for
+          ultimate control over the Mushroom Kingdom!
+        </p>
+        <button onclick="showHideRulesGame1()" class="open-rules-game1">
+          Rules
+        </button>
+        <a href="tic-tac-yahoo.html" class="play-game1">Play!</a>
+      </div>
 
-        <div class="how-to-play-game-1 hide">
-            <h4>How to Play:</h4>
-            <ol class="rules-game1-list">
-                <li>Players:
-                    <ul class="player-list">
-                        <li>Player 1 is represented by Mario</li>
-                        <li>Player 2 is represented by Bowser</li>
-                    </ul>
-                </li>
-                <li>Objective:
-                    <p>The goal is to get three in a row horizontally, vertically, or diagonally using your character (Mario or Bowser). The first player to achieve this wins the game!</p>
-                </li>
-                <li>Game Board:
-                    <p>The Tic-Tac-Toe board is a 3x3 grid, just like the traditional version. However, instead of using circles (O) and crosses (X), Player 1 will place Mario's image in a square, and Player 2 will place Bowser's image in their chosen square.</p>
-                </li>
-                <li>Turn Sequence:
-                    <ul class="turn-sequence-list">
-                        <li>Player 1 (Mario) goes first and selects a square to place Mario's image.</li>
-                        <li>Player 2 (Bowser) then chooses a different square to place Bowser's image.</li>
-                        <li>The game alternates between players until one player gets three of their images in a row or the board is full.</li>
-                    </ul>
-                </li>
-                <li>Winning the Game:
-                    <ul class="winning-rules">
-                        <li>If a player gets three Mario or three Bowser images in a straight line (horizontal, vertical, or diagonal), they win!</li>
-                        <li>If all squares are filled and no one has three in a row, it's a draw.</li>
-                    </ul>
-                </li>
-            </ol>
-        </div>
+      <div class="how-to-play-game-1 hide">
+        <h4>How to Play:</h4>
+        <ol class="rules-game1-list">
+          <li>
+            Players:
+            <ul class="player-list">
+              <li>Player 1 is represented by Mario</li>
+              <li>Player 2 is represented by Bowser</li>
+            </ul>
+          </li>
+          <li>
+            Objective:
+            <p>
+              The goal is to get three in a row horizontally, vertically, or
+              diagonally using your character (Mario or Bowser). The first
+              player to achieve this wins the game!
+            </p>
+          </li>
+          <li>
+            Game Board:
+            <p>
+              The Tic-Tac-Toe board is a 3x3 grid, just like the traditional
+              version. However, instead of using circles (O) and crosses (X),
+              Player 1 will place Mario's image in a square, and Player 2 will
+              place Bowser's image in their chosen square.
+            </p>
+          </li>
+          <li>
+            Turn Sequence:
+            <ul class="turn-sequence-list">
+              <li>
+                Player 1 (Mario) goes first and selects a square to place
+                Mario's image.
+              </li>
+              <li>
+                Player 2 (Bowser) then chooses a different square to place
+                Bowser's image.
+              </li>
+              <li>
+                The game alternates between players until one player gets three
+                of their images in a row or the board is full.
+              </li>
+            </ul>
+          </li>
+          <li>
+            Winning the Game:
+            <ul class="winning-rules">
+              <li>
+                If a player gets three Mario or three Bowser images in a
+                straight line (horizontal, vertical, or diagonal), they win!
+              </li>
+              <li>
+                If all squares are filled and no one has three in a row, it's a
+                draw.
+              </li>
+            </ul>
+          </li>
+        </ol>
+      </div>
 
-        <div class="rules-game2">
-            <h3>Mario Shadow Quest</h3>
-            <p>Welcome to Mario Shadow Quest, where you step into the Mushroom Kingdom and put your Mario knowledge to the test! Can you recognize your favorite characters from just their shadow?</p>
-            <button onclick="showHideRulesGame2()" class="open-rules-game2">Rules</button>
-            <a href="mario-shadow-quest.html" class="play-game2">Play!</a>
-        </div>
+      <div class="rules-game2">
+        <h3>Mario Shadow Quest</h3>
+        <p>
+          Welcome to Mario Shadow Quest, where you step into the Mushroom
+          Kingdom and put your Mario knowledge to the test! Can you recognize
+          your favorite characters from just their shadow?
+        </p>
+        <button onclick="showHideRulesGame2()" class="open-rules-game2">
+          Rules
+        </button>
+        <a href="mario-shadow-quest.html" class="play-game2">Play!</a>
+      </div>
 
-        <div class="how-to-play-game-2 hide">
-            <h4>How to Play:</h4>
-            <ol class="rules-game2-list">
-                <li>Objective:
-                    <p>As you adventure through this game, you'll see mysterious silhouettes of Mario and his pals! But here's the twist - you only get two options to guess who it is. Choose wisely and collect as many points as you can before the time runs out.</p>
-                </li>
-                <li>The Clock's Ticking!
-                    <p>You've got just 10 seconds per question! Time flies faster than a Super Star, so make your guess quick or the Koopa Troopas will catch up with you!</p>
-                </li>
-                <li>Scoring:
-                    <ul class="scoring-rules">
-                        <li>Correct answers? You score a big 1-Up!</li>
-                        <li>Wrong answers? Oh no, you'll take a hit like falling into a pit!</li>
-                    </ul>
-                </li>
-                <li>Winning the Game:
-                    <p>Rack up as many correct answers as you can before the time runs out! Show Bowser who's boss by setting a high score. Can you become the Mushroom Kingdom's shadow-guessing champion?</p>
-                </li>
-            </ol>
-        </div>
+      <div class="how-to-play-game-2 hide">
+        <h4>How to Play:</h4>
+        <ol class="rules-game2-list">
+          <li>
+            Objective:
+            <p>
+              As you adventure through this game, you'll see mysterious
+              silhouettes of Mario and his pals! But here's the twist - you only
+              get two options to guess who it is. Choose wisely and collect as
+              many points as you can before the time runs out.
+            </p>
+          </li>
+          <li>
+            The Clock's Ticking!
+            <p>
+              You've got just 10 seconds per question! Time flies faster than a
+              Super Star, so make your guess quick or the Koopa Troopas will
+              catch up with you!
+            </p>
+          </li>
+          <li>
+            Scoring:
+            <ul class="scoring-rules">
+              <li>Correct answers? You score a big 1-Up!</li>
+              <li>
+                Wrong answers? Oh no, you'll take a hit like falling into a pit!
+              </li>
+            </ul>
+          </li>
+          <li>
+            Winning the Game:
+            <p>
+              Rack up as many correct answers as you can before the time runs
+              out! Show Bowser who's boss by setting a high score. Can you
+              become the Mushroom Kingdom's shadow-guessing champion?
+            </p>
+          </li>
+        </ol>
+      </div>
     </section>
 
     <footer>
-        <ul id="social-network">
-            <li><a href="https://www.facebook.com/" target="_blank" rel="noopener" aria-label="Visit our facebook page (opens in a new tab)"><i class="fa-brands fa-facebook"></i></a></li>
-            <li><a href="https://www.instagram.com/" target="_blank" rel="noopener" aria-label="Visit our instagram page (opens in a new tab)"><i class="fa-brands fa-instagram"></i></a></li>
-            <li><a href="https://www.linkedin.com/" target="_blank" rel="noopener" aria-label="Visit our linkedin page (opens in a new tab)"><i class="fa-brands fa-linkedin"></i></a></li>
-        </ul>
+      <ul id="social-network">
+        <li>
+          <a
+            href="https://www.facebook.com/"
+            target="_blank"
+            rel="noopener"
+            aria-label="Visit our facebook page (opens in a new tab)"
+            ><i class="fa-brands fa-facebook"></i
+          ></a>
+        </li>
+        <li>
+          <a
+            href="https://www.instagram.com/"
+            target="_blank"
+            rel="noopener"
+            aria-label="Visit our instagram page (opens in a new tab)"
+            ><i class="fa-brands fa-instagram"></i
+          ></a>
+        </li>
+        <li>
+          <a
+            href="https://www.linkedin.com/"
+            target="_blank"
+            rel="noopener"
+            aria-label="Visit our linkedin page (opens in a new tab)"
+            ><i class="fa-brands fa-linkedin"></i
+          ></a>
+        </li>
+      </ul>
     </footer>
 
     <!-- Font awesome kit -->
-    <script src="https://kit.fontawesome.com/c247824db4.js" crossorigin="anonymous"></script>
+    <script
+      src="https://kit.fontawesome.com/c247824db4.js"
+      crossorigin="anonymous"
+    ></script>
     <script src="assets/js/script.js"></script>
-</body>
-
+  </body>
 </html>
