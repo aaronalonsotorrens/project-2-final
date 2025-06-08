@@ -19,9 +19,9 @@ body {
 
 /* Buttons */
 a, button {
-    -webkit-tap-highlight-color: transparent;
     -webkit-appearance: none;
     appearance: none;
+    -webkit-tap-highlight-color: transparent;
     text-decoration: none;
   }
   
@@ -32,7 +32,7 @@ a, button {
   a:active,
   button:focus,
   button:active {
-    color: inherit;
+    color: black;
     text-decoration: none;
   }
 
